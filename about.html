@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" />
+<style>
+    html, body{
+        font-family: 'Merriweather';
+        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_base.jpg);
+        font-size: 20px;
+
+        height: 100%;
+    }
+
+    b{
+        color:#9F9150; /* NEW!!!!!! IMPORTANT!!!! */
+    }
+
+    a{
+        color:white; /* NEW!!!!!! IMPORTANT!!!! */
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+
+    a:hover{
+        color:#9F9150; /* NEW!!!!!! IMPORTANT!!!! */
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+
+    h3{
+        color:#9F9150; /* NEW!!!!!! IMPORTANT!!!! */
+        font-variant: small-caps;
+    }
+
+    #top-button{/* NEW!!!!!! IMPORTANT!!!! */
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        cursor: pointer;
+    }
+
+    #title{
+        font-size: 30px;
+        font-variant: small-caps;
+        color: white;
+        position: absolute;
+        top: 67%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #links{
+        padding:5px;
+        font-size: 20px;
+    }
+
+    #footer{
+        font-size: 10px;
+    }
+
+    .body-text{ /* NEW!!!!!! IMPORTANT!!!! */
+        font-size: 18px;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        padding:20px
+    }
+
+    .info-box{
+        background-color: #5e3436d2;
+        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
+        color: white;
+        border: #9F9150 double 5px;
+        padding: 20px;
+        margin: 10px;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .info-box b {
+        color: white;
+    }
+
+    #sample-box{
+        text-align: center;
+    }
+
+    /* GRID */
+    .header-box {
+        grid-area: header; 
+        background-color: #5E3436;
+        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
+        border-bottom: #9F9150 double 10px;
+        color: white;
+        height:250px;
+    }
+    .main-box { grid-area: main; }
+    .footer-box { 
+        grid-area: footer; 
+        background-color: #5E3436;
+        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
+        border-top: #9F9150 double 10px;
+        color: white;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'main'
+            'footer';
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-container > div {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    }
+    
+    #title-box{
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+
+    /* MODAL BACKGROUND */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #383838ea;
+        -moz-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in;
+    }
+
+    /* MODAL CONTENT */
+    .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 30%;
+        max-width: 1200px;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:white;
+    }
+
+    /* MODAL IMG */
+    .modal-content img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .modal-title{
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    /* CLOSE BUTTON */
+    .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    /* Hide the slides by default */
+    .imgpopup {
+    display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    img.demo {
+    opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+    opacity: 1;
+    }
+
+    img.hover-shadow {
+    transition: 0.3s;
+    }
+
+    .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    /* GLOWS */
+
+    #churro img:hover{
+        content:url(churro2.png);
+    }
+
+    #bastard img:hover{
+        content:url(bastard2.png);
+    }
+
+    #cello img:hover{
+        content:url(cello2.png);
+    }
+</style>
+<body>
+    <div id="top-button" onclick="topFunction()"><img src="cello.png" width="100px"></div>
+    <div class="grid-container">
+        <div class="header-box">
+            <div id="title-box">
+                <img src="https://www.ace-attorney.com/great1-2/assets/image/common/ttl_decbg.png">
+                <div id="title">The Great Ace Attorney Chronicles Art Collaboration</div>
+            </div>
+            <div id="links">Main • About • Artist</div>
+        </div>
+        <div class="main-box">
+            <div class="body-text">
+                To celebrate the 2 year anniversary of the English release of The Great Ace Attorney: Chronicles, we are hosting an <b>art collaboration featuring every character in the game</b>! This collaboration will be open to all artists no matter the skill level or experience; all we ask is that you are able to send a <b>full-body drawing with transparent background</b>.
+                <br><br>
+                The final collaboration will be hosted on this website where you'll be able to see all of the artwork together. You can click on the individual pieces to view them at full size and see artist info. We will also share the final collab as either an image or video on Twitter. Let's enjoy the annivesary of TGAA together!
+                <br><br>
+                The information on this page is also available as a Google document.
+                <br><br>
+                <h3>Sign-up Information</h3>
+                <div class="info-box">
+                    ✧ Sign-ups will open <b>April 1st</b> at 3 PM PST.
+                    <br>✧ Sign-ups are first come-first served and capped at <b>51 artists</b>. Sign-ups will close on <b>April 30th</b> or when 50 forms are received.
+                    <br>✧ While sign-ups themselves are chosen by whoever fills the form first, <b>character assignments</b> are not. Assigned character(s) will only be sent via email at the end of the sign-up period.
+                    <br>✧ When you fill the form, you can write at <b>least 8 characters</b> you would be interested in drawing. You can also choose if you'd be OK with drawing any character or multiple characters (in case there aren't enough artists by the end of the sign-up period).
+                    <br>⠀⠀⠀⠀✧ Please include at least 3 <b>'minor characters'</b> in your list! We're expecting most people will want to draw the 'main characters', but <b>we can only accept one artist per character</b>! If you could be as broad as possible with which characters you'd like to draw, that would be the best.
+                    <br>⠀⠀⠀⠀✧ Note that if you choose 'OK with drawing any character', you may be chosen to draw <i>any</i> of the characters shown here.
+                    <br>⠀⠀⠀⠀✧ In the case that we are unable to assign you to any of the characters you listed, we will check if you are OK with drawing another available character.
+                    <p>[Image here]
+                        <br>Note: List of characters and artist count may be subject to change by sign-up date, but it will remain around this number.
+                    </p>
+                </div>
+                <h3>Submission Information</h3>
+                <div class="info-box">
+                    ✧ Once the sign-up period ends, we will email you your assigned character.
+                    <br>✧ Sign-ups are first come-first served and capped at <b>51 artists</b>. Sign-ups will close on <b>April 30th</b> or when 50 forms are received.
+                    <br>✧ We will send an email occasionally to remind you of the project, however there will be no formal check-in (you do not need to send WIPs unless you want).
+                    <br>⠀⠀⠀⠀✧ There will be an optional Discord server which you can join if you want to meet others drawing for the collaboration, however it is not a requirement.
+                    <br>✧ You have to send the final image by <b>June 30</b>. Image requirements:
+                    <br>⠀⠀⠀⠀✧ Full-body drawing of the character in their 'regular' outfit
+                    <br>⠀⠀⠀⠀✧ At least 1000×1000px and in color. Doesn't need to be fully shaded
+                    <br>⠀⠀⠀⠀✧ PNG format with transparent background
+                    <br>✧ In case you need to drop out of the project or need some extra time, please let us know immediately so we can organize a backup.
+                </div>
+                <h3>Schedule</h3>
+                <div class="info-box">
+                    ✧ <b>April 1st:</b> Sign-ups open
+                    <br>✧ <b>April 30th:</b> Sign-ups close (unless limit is reached earlier)
+                    <br>✧ <b>May 2nd:</b> Emails/character assignment sent
+                    <br>✧ <b>June 30th:</b> Final image deadline
+                    <br>✧ <b>June 27th:</b> Collaboration website released!
+                    <br>⠀⠀⠀⠀✧ After the release of the website, you can post your full image with the hashtag #TGAACollab so we can RT it!
+                </div>
+
+                <h3>Questions</h3>
+                <div class="info-box">
+                    <p><b>What will the website be like?</b>
+                        <br>All completed images will be viewable on the main page. You'll be able to click on the image to view it in full size and see artist info. The site will be revamped more in the following months to improve code and visuals. For examples of other collab project websites, see: <a href="https://ufacenewface.wixsite.com/dgsdec">Christmas in London</a>, <a href="https://pjina8860.wixsite.com/gyakuten-crossover">Gyakuten Crossover</a>, <a href="https://catunong0216.wixsite.com/aceattorneyfairytale">Ace Attorney Fairytale</a>, and <a href="https://lim101465.wixsite.com/gyakutenhalloween/blank">Gyakuten Halloween</a> (all AA examples; the formats are a bit different from our goal but it'll be something like these).
+                        <div id="sample-box"><span id="churro"><img src="churro.png" height="200px" onclick="openModal();currentSlide(1)"></span>
+                            <span id="bastard"><img src="bastard.png" height="200px" onclick="openModal();currentSlide(2)"></span></div>
+                    </p>
+                    <p><b>Who can join?</b>
+                        <br>Any artist can join, as long as you are able to fulfil the requirement of sending a full-body with transparent background! Previous experience is not required and 'skill level' will not be taken into account. However, we will still ask for previous art samples in order to assign characters better (so that the old man likers can draw old men basically).
+                    </p>
+                    <p><b>What if not all slots are filled by the end of the sign-up period?</b>
+                        <br>If there are enough artists who are OK with drawing multiple characters, we will proceed with featuring all characters. If there aren't enough artists for that, we will downscale and focus on major characters/major side characters only.
+                    </p>
+                    <p><b>What about characters with multiple 'regular' outfits?</b>
+                        <br>You can pick either 'regular' outfit you want (e.g. Asogi's school uniform or prosecutor suit are both OK, Gina's thief or detective outfit are both OK). Please don't draw characters in their DLC costumes or any other outfits aside from what they usually wear.
+                    </p>
+                    <p><b>Who is the organizer?</b>
+                        <br>It's run by Andrew (<a href="https://www.twitter.com/milaza_zo">milaza_zo</a>/<a href="https://www.twitter.com/milaza_dgs">milaza_dgs</a>). I keep saying we to sound more professional but it's just me. Hi. Favorite TGAA character is Van Zieks (note: I won't be drawing him for this event; I'll take whichever character is left over). In terms of previous fanevent hosting experience, I run the annual <a href="https://www.twitter.com/sidemsanta">SideM Secret Santa</a> and did art/graphics/formatting tasks for the <a href="https://www.twitter.com/es21fanzine">Eyeshield 21 zine</a>. I'm extra and like coding websites which is why it's like this instead of a digital zine. 
+                    </p>
+
+                    <p><b>Any other questions?</b>
+                        <br>Feel free to DM on <a href="https://www.twitter.com/tgaacollab">Twitter</a> or send them to <a href="https://www.retrospring.com/tgaacollab">Retrospring</a> anonymously.
+                    </p>
+                </div>
+            </div>
+            
+        </div>  
+        <div class="footer-box">
+            <div id="footer">Footer text goes here</div>
+        </div>
+      </div>
+
+    <!--LIGHTBOX-->
+    <div id="imgpopup" class="modal">
+            <div class="modal-content">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+
+                <div class="mySlides">
+                    <img src="churro.png" style="width:400px" loading="lazy">
+                    <span class="modal-title">This will look cooler later!</span><br>I promise!!!
+                </div>
+
+                <div class="mySlides">
+                    <img src="bastard.png" style="width:400px" loading="lazy">
+                    <span class="modal-title">Bastard Van Zieks</span><br>Big crepe
+                </div>
+
+                 <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+    </div>
+
+    <!--SCRIPTS-->
+
+    <script>
+        // NEW!!!!!!!!
+        // Get the button:
+        let mybutton = document.getElementById("top-button");
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+
+        // Open the Modal
+        function openModal() {
+          document.getElementById("imgpopup").style.display = "block";
+        }
+        
+        // Close the Modal
+        function closeModal() {
+          document.getElementById("imgpopup").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+</body>
+</html>

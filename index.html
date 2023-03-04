@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+<html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" />
 <style>
-    body{
+    html, body{
         font-family: 'Merriweather';
         background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_base.jpg);
         font-size: 20px;
+
+        height: 100%;
     }
 
     #title{
@@ -33,6 +37,7 @@
         background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
         border-bottom: #9F9150 double 10px;
         color: white;
+        height:60%;
     }
     .main-box { grid-area: main; }
     .footer-box { 
@@ -49,6 +54,8 @@
             'header'
             'main'
             'footer';
+        width: 100%;
+        height: 100%;
     }
 
     .grid-container > div {
@@ -190,6 +197,10 @@
     #bastard img:hover{
         content:url(bastard2.png);
     }
+
+    #cello img:hover{
+        content:url(cello2.png);
+    }
 </style>
 <body>
     <div class="grid-container">
@@ -203,6 +214,7 @@
         <div class="main-box">
             <span id="churro"><img src="churro.png" height="300px" onclick="openModal();currentSlide(1)"></span>
             <span id="bastard"><img src="bastard.png" height="300px" onclick="openModal();currentSlide(2)"></span>
+            <span id="cello"><img src="cello.png" height="300px" onclick="openModal();currentSlide(3)"></span>
         </div>  
         <div class="footer-box">
             <div id="footer">Footer text goes here</div>
@@ -222,6 +234,11 @@
                 <div class="mySlides">
                     <img src="bastard.png" style="width:400px" loading="lazy">
                     <span class="modal-title">Bastard Van Zieks</span><br>Text here
+                </div>
+
+                <div class="mySlides">
+                    <img src="cello.png" style="width:400px" loading="lazy">
+                    <span class="modal-title">Cello Van Zieks</span><br>Text here
                 </div>
 
                  <!-- Next/previous controls -->
@@ -274,3 +291,4 @@
         </script>
 
 </body>
+</html>

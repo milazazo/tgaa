@@ -1,310 +1,50 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" />
+<link rel="stylesheet" href="style.css" />
 <style>
-    html, body{
-        font-family: 'Merriweather';
-        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_base.jpg);
-        font-size: 20px;
-
-        height: 100%;
-    }
-
-    b{
-        color:#9F9150; /* NEW!!!!!! IMPORTANT!!!! */
-    }
-
-    a{
-        color:white; /* NEW!!!!!! IMPORTANT!!!! */
-        -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in;
-    }
-
-    a:hover{
-        color:#9F9150; /* NEW!!!!!! IMPORTANT!!!! */
-        -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in;
-    }
-
-    h3{
-        color:#9F9150; /* NEW!!!!!! IMPORTANT!!!! */
-        font-variant: small-caps;
-    }
-
-    #top-button{/* NEW!!!!!! IMPORTANT!!!! */
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        cursor: pointer;
-    }
-
-    #title{
-        font-size: 30px;
-        font-variant: small-caps;
-        color: white;
-        position: absolute;
-        top: 67%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-    }
-
-    #links{
-        padding:5px;
-        font-size: 20px;
-    }
-
-    #footer{
-        font-size: 10px;
-    }
-
-    .body-text{ /* NEW!!!!!! IMPORTANT!!!! */
-        font-size: 18px;
-        width: 65%;
-        margin-left: auto;
-        margin-right: auto;
-        padding:20px
-    }
-
-    .info-box{
-        background-color: #5e3436d2;
-        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
-        color: white;
-        border: #9F9150 double 5px;
-        padding: 20px;
-        margin: 10px;
-        font-size: 16px;
-        text-align: left;
-    }
-
-    .info-box b {
-        color: white;
-    }
-
-    .shadow {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    #sample-box{
-        text-align: center;
-    }
-
-    /* GRID */
-    .header-box {
-        grid-area: header; 
-        background-color: #5E3436;
-        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
-        border-bottom: #9F9150 double 10px;
-        color: white;
-        height:250px;
-    }
-    .main-box { grid-area: main; }
-    .footer-box { 
-        grid-area: footer; 
-        background-color: #5E3436;
-        background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
-        border-top: #9F9150 double 10px;
-        color: white;
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-            'header'
-            'main'
-            'footer';
-        width: 100%;
-        height: 100%;
-    }
-
-    .grid-container > div {
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
-    }
-    
-    #title-box{
-        position: relative;
-        text-align: center;
-        color: white;
-    }
-
-
-    /* MODAL BACKGROUND */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: #383838ea;
-        -moz-transition: all 0.2s ease-in;
-        -o-transition: all 0.2s ease-in;
-        -webkit-transition: all 0.2s ease-in;
-        transition: all 0.2s ease-in;
-    }
-
-    /* MODAL CONTENT */
-    .modal-content {
-        position: relative;
-        margin: auto;
-        padding: 0;
-        width: 50%;
-        max-width: 1200px;
-        text-align: center;
-        font-size: 14px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color:white;
-    }
-
-    /* MODAL IMG */
-    .modal-content img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .modal-title{
-        font-size: 20px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    /* CLOSE BUTTON */
-    .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-    }
-
-    /* Hide the slides by default */
-    .imgpopup {
-    display: none;
-    }
-
-    /* Next & previous buttons */
-    .prev,
-    .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    }
-
-    .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    img.demo {
-    opacity: 0.6;
-    }
-
-    .active,
-    .demo:hover {
-    opacity: 1;
-    }
-
-    img.hover-shadow {
-    transition: 0.3s;
-    }
-
-    .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    /* GLOWS */
-    .hover-pic{
-        cursor: pointer;
-    }
-
     #sample-pic img:hover{
         content:url(sample_b.png);
     }
-
-    /* NEW!!!!! IMPORTANT!!!!! */
-    @media (max-width: 1080px) {
-        .body-text{ /* NEW!!!!!! IMPORTANT!!!! */
-        font-size: 18px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding:20px
-    }
-}
 </style>
+<head>
+    <title>TGAA Collab: About</title>
+</head>
 <body>
-    <div id="top-button" onclick="topFunction()"><img src="cello.png" width="100px"></div>
+    <div id="top-button" onclick="topFunction()"><img src="ui/button_top.png" width="100px"></div>
     <div class="grid-container">
         <div class="header-box">
             <div id="title-box">
-                <img src="https://www.ace-attorney.com/great1-2/assets/image/common/ttl_decbg.png">
-                <div id="title">The Great Ace Attorney Chronicles Art Collaboration</div>
+                <a href="/index.html"><img src="ui/banner.png">
+                <div id="title">The Great Ace Attorney 2nd Release Anniversary Art Collaboration</div></a>
             </div>
-            <div id="links">Main • About • Artist</div>
+                <span class="button"><a href="/index.html">Main</a></span>
+                <span class="button"><a href="/about.html">About</a></span>
+                <span class="button"><a href="https://www.twitter.com/tgaacollab">Twitter</a></span>
+                <span class="button"><a href="https://www.retrospring.com/tgaacollab">Retrospring</a></span>
         </div>
         <div class="main-box">
             <div class="body-text">
                 To celebrate the 2 year anniversary of the English release of The Great Ace Attorney: Chronicles, we are hosting an <b>art collaboration featuring every character in the game</b>! This collaboration will be open to all artists no matter the skill level or experience; all we ask is that you are able to send a <b>full-body drawing with transparent background</b>.
                 <br><br>
-                The final collaboration will be hosted on this website. You'll be able to see all of the artwork together and click on the individual pieces to view them at full size and see artist info. We will also share the final collab as either an image or video on Twitter. Let's enjoy the annivesary of TGAA's release together!
+                The final collaboration will be hosted on this website. You'll be able to see all of the artwork together and click on the individual pieces to view them at full size and see artist info. We will also share the final collab as either an image or video on Twitter. Let's enjoy the anniversary of TGAA's release together!
                 <br><br>
-                The information on this page is also available as a Google document.
+                <a href="https://docs.google.com/document/d/1pE2uGB-6hP-HiCSzC0i2eJLyjW6MmWxGUn2PQKG5QQA/edit?usp=sharing">The information on this page is also available as a Google document.</a>
                 <br><br>
                 <h3>Sign-up Information</h3>
-                <div class="info-box">
+                <div class="info-box"><div id="info-box-border"></div>
                     ✧ Sign-ups will open <b>April 1st</b> at 3 PM PST.
                     <br>✧ Sign-ups are first come-first served and capped at <b>51 artists</b>. Sign-ups will close on <b>April 30th</b> or when 50 forms are received.
                     <br>✧ While sign-ups themselves are chosen by whoever fills the form first, <b>character assignments are not</b>. Assigned character(s) will only be sent via email at the end of the sign-up period.
                     <br>✧ When you fill the form, you can write at <b>least 8 characters</b> you would be interested in drawing. You can also choose if you'd be OK with drawing any character or multiple characters (in case there aren't enough artists by the end of the sign-up period).
-                    <br>⠀⠀⠀⠀✧ Please include at least <b>4 minor side characters</b> in your list! We're expecting most people will want to draw the main characters, but <b>we can only accept one artist per character</b>! If you could be as broad as possible with which characters you'd like to draw, that would be the best.
+                    <br>⠀⠀⠀⠀✧ Please include at least <b>3 minor side characters</b> in your list! We're expecting most people will want to draw the main characters, but <b>we can only accept one artist per character</b>! If you could be as broad as possible with which characters you'd like to draw, that would be the best.
                     <br>⠀⠀⠀⠀✧ Note that if you choose 'OK with drawing any character', you may be chosen to draw <i>any</i> of the characters shown here.
                     <br>⠀⠀⠀⠀✧ In the case that we are unable to assign you to any of the characters you listed, we will check if you are OK with drawing another available character.
-                    <p><div id="sample-box"><img src="chart.png" class="shadow" width="80%"></div>
-                    <br>✧ List of characters and artist count may be subject to change by sign-up date, but it will remain around this number. A Twitter poll will be held later to determine whether 'undecided' characters will be included in the collaboration or not.
-                    <br>✧ You can choose if you want to draw a chibi of a character not listed here <i>in addition</i> to your main assigned character. These characters will be either jury-only characters or victim characters (most of them at least). Depending on whether or not we get enough artists for this part, these characters might not be included entirely.
+                    <p><div class="sample-box"><img src="chart.png" class="shadow" width="80%"></div>
                     </p>
                 </div>
                 <h3>Submission Information</h3>
-                <div class="info-box">
+                <div class="info-box"><div id="info-box-border"></div>
                     ✧ Once the sign-up period ends, we will email you your assigned character.
                     <br>✧ We will send an email occasionally to remind you of the project, however there will be no formal check-in (you do not need to send WIPs unless you want).
                     <br>⠀⠀⠀⠀✧ There will be an <i>optional</i> Discord server which you can join if you want to meet others drawing for the collaboration.
@@ -315,24 +55,24 @@
                     <br>✧ In case you need to drop out of the project or need some extra time, please let us know as soon as possible.
                 </div>
                 <h3>Schedule</h3>
-                <div class="info-box">
+                <div class="info-box"><div id="info-box-border"></div>
                     ✧ <b>April 1st:</b> Sign-ups open
                     <br>✧ <b>April 30th:</b> Sign-ups close (unless limit is reached earlier)
                     <br>✧ <b>May 4th:</b> Emails/character assignment sent
                     <br>✧ <b>June 30th:</b> Final image deadline
-                    <br>✧ <b>June 27th:</b> Collaboration released!
+                    <br>✧ <b>July 27th:</b> Collaboration released!
                     <br>⠀⠀⠀⠀✧ After the release of the collab, you can post your final art with the hashtag <b>#TGAACollab</b> so we can RT it!
                 </div>
 
                 <h3>Questions</h3>
-                <div class="info-box">
+                <div class="info-box"><div id="info-box-border"></div>
                     <p><b>What will the website be like?</b>
                         <br>All completed images will be viewable on the main page. You'll be able to click on the image to view it in full size and see artist info. The site will be revamped more in the following months to improve code and visuals. Here's a mockup for an idea:
-                        <div id="sample-box"><span class="hover-pic" id="sample-pic"><img src="sample.png" height="200px" onclick="openModal();currentSlide(1)"></span></div>
+                        <div class="sample-box"><span class="hover-pic" id="sample-pic"><img src="sample.png" height="200px" onclick="openModal();currentSlide(1)"></span></div>
                         <br>Some other examples of collaboration websites: <a href="https://ufacenewface.wixsite.com/dgsdec">Christmas in London</a>, <a href="https://lim101465.wixsite.com/gyakutenhalloween/blank">Gyakuten Halloween</a>, <a href="https://catunong0216.wixsite.com/aceattorneyfairytale">Ace Attorney Fairytale</a>...
                     </p>
                     <p><b>Who can join?</b>
-                        <br>Any artist can join, as long as you are able to fulfil the requirement of sending a full-body with transparent background! Previous experience in fan events is not required and skill level will not be taken into account.
+                        <br>Any artist can join, as long as you are able to fulfill the requirement of sending a full-body with transparent background! Previous experience in fan events is not required and skill level will not be taken into account.
                     </p>
                     <p><b>What if not all slots are filled by the end of the sign-up period?</b>
                         <br>If there are enough artists who are OK with drawing multiple characters, we will proceed with featuring all characters. If there aren't enough artists for that, we will downscale and focus on major characters/major side characters only.
@@ -343,7 +83,7 @@
                         <br><br>If you want to, you can draw two versions of your assigned character with different canon outfit, expression, masked identity (for Kazuma/Daley/etc.). This alternate version will be visible upon hovering over the image.
                     </p>
                     <p><b>How are the characters for inclusion selected?</b>
-                        <br>It's based on the list of characters that appear in the 'Profiles' section of the Court Record in-game, excluding victims who did not interact with Ryunosuke as a playable character in-game (so Pop Windibank is included as the player can interact with him, but John Wilson is not even though he interacted with Ryunosuke). Because of the popularity/story significance of Klint van Zieks, Genshin Asogi, and Lady Baskerville, we will hold a poll to see if they should be included in the main list later.
+                        <br>It's based on the list of characters that appear in the 'Profiles' section of the Court Record in-game, excluding victims who did not interact with Ryunosuke as a playable character in-game (so Pop Windibank is included as the player can interact with him, but John Wilson is not even though he interacted with Ryunosuke). Klint van Zieks, Genshin Asogi, and Lady Baskerville are also included for their story-relevance and connection to main characters (also because Lady B has more fans than half of the characters in TGAA).
                         <br><br>
                         If there is enough interest in drawing the aforementioned victim and jury-only characters, we can include them as well. These will be chibi only and are <i>in addition</i> to an artists' assigned character (no extra slots will be opened for these characters).
                     </p>
@@ -359,7 +99,9 @@
             
         </div>  
         <div class="footer-box">
-            <div id="footer">Footer text goes here</div>
+            <div id="footer">Unofficial The Great Ace Attorney fan collaboration.
+                <br>Background by @GarryKillian.
+            </div>
         </div>
       </div>
 
@@ -369,7 +111,7 @@
                 <span class="close cursor" onclick="closeModal()">&times;</span>
 
                 <div class="mySlides">
-                    <img src="sample.png" style="width:80%" loading="lazy">
+                    <img src="sample.png" style="width:80%">
                     <span class="modal-title">This will look cooler later I promise!!!</span><br>Artist info goes here
                 </div>
 
@@ -383,59 +125,7 @@
             </div>
     </div>
 
-    <!--SCRIPTS-->
-
-    <script>
-        // NEW!!!!!!!!
-        // Get the button:
-        let mybutton = document.getElementById("top-button");
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-
-
-        // Open the Modal
-        function openModal() {
-          document.getElementById("imgpopup").style.display = "block";
-        }
-        
-        // Close the Modal
-        function closeModal() {
-          document.getElementById("imgpopup").style.display = "none";
-        }
-        
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        // Thumbnail image controls
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("demo");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
+    <script src="index.js"></script> 
 
 </body>
 </html>

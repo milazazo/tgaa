@@ -4,17 +4,16 @@
         font-family: 'Merriweather';
         background-image: url(ui/background.png);
         font-size: 20px; /* REPLACE LATER: FONT SIZE */
-        width: 100%;
         height: 100%;
     }
 
     b{
-        color:#9F9150;
+        color:#c4882e;
         text-shadow: 0 0 3px #9f915096;
     }
 
     h3{
-        color:#9F9150;
+        color:#c4882e;
         font-variant: small-caps;
         text-shadow: 0 0 3px #9f915096;
     }
@@ -123,14 +122,14 @@
     }
 
     .body-text a{
-        color: #5E3436;
+        color: #7D1D22;
     }
 
     .info-box{
-        background-color: #5e3436d2;
+        background-color: #791f23d7;
         background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
         color: white;
-        border: #9F9150 double 5px;
+        border: #E7BE82 double 5px;
         padding: 20px;
         margin: 10px;
         font-size: 16px; /* REPLACE LATER: FONT SIZE */
@@ -175,18 +174,18 @@
 
     .header-box {
         grid-area: header; 
-        background-color: #5E3436;
+        background-color: #7D1D22;
         background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
-        border-bottom: #9F9150 double 10px;
+        border-bottom: #E7BE82 double 10px;
         color: white;
         height:200px;
     }
     .main-box { grid-area: main; }
     .footer-box { 
         grid-area: footer; 
-        background-color: #5E3436;
+        background-color: #7D1D22;
         background-image: url(https://www.ace-attorney.com/great1-2/assets/image/common/bg_overlay.png);
-        border-top: #9F9150 double 10px;
+        border-top: #E7BE82 double 10px;
         color: white;
     }
 

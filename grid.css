@@ -173,7 +173,7 @@ html, body{
 }
 
 .content{
-transform: translateY(-2vh);
+transform: none; /* if you need to lower the grid later do it here */
 margin: auto;
 width: 95vw;
 display: flex;
@@ -322,6 +322,10 @@ display: none;
 /* HOVER */
 #lazyemma710 img:hover{
   content:url("art/lazyemma710-2.webp");
+}
+
+#heavendraven img:hover{
+  content:url("art/heavendraven-2.webp")
 }
 
 #rai img:hover{

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" />
+<link rel="stylesheet" href="style.css" />
+<head>
+    <title>TGAA Collab: Artists</title>
+    <link rel="icon" type="image/x-icon" href="ui/button_top.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Unofficial The Great Ace Attorney fan art collaboration">
+    <meta name="keywords" content="The Great Ace Attorney, TGAA, Dai Gyakuten Saiban, DGS, Ace Attorney, art, fanart, collaboration">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    #artists-parent{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .artist{
+        background-color: #a77222;
+        background-image: url(ui/overlay.png);
+        border-style: double;
+        border-color: white;
+        border-radius: 10px;
+        color: white;
+        padding: 1em;
+        margin: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .artist-list .soclink{
+        display: inline-block;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    @media (max-width: 1080px) {
+        #artists-parent{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    }
+</style>
+<body>
+    <div id="top-button" class="hover-pic" onclick="topFunction()"><img src="ui/button_top.png"></div>
+    <div class="grid-container">
+        <div class="header-box">
+            <div id="title-box">
+                <a href="/index.html"><img src="ui/banner_text.png"></a>
+            </div>
+                <span class="button"><a href="/index">Main</a></span>
+                <span class="button"><a href="/about">About</a></span>
+                <span class="button"><a href="/artists">Artists</a></span>
+                <span class="button"><a href="https://www.retrospring.net/tgaacollab">Ask</a></span>
+                <span class="button"><a href="https://www.twitter.com/tgaacollab">Twitter</a></span>
+        </div>
+        <div class="main-box">
+            <div class="body-text">
+                <div id="artists-parent" style="text-align: center; font-style: normal;">
+                </div>
+            </div>
+            
+        </div>  
+        <div class="footer-box">
+            <div id="footer">Unofficial The Great Ace Attorney fan collaboration.
+                <br>Background by @GarryKillian.
+            </div>
+        </div>
+      </div>
+
+    <script src="index.js"></script> 
+    <script src="array.js"></script> 
+    <script>artistListing();</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" />
+<link rel="stylesheet" href="style.css" />
+<head>
+    <title>TGAA Collab: About</title>
+    <link rel="icon" type="image/x-icon" href="ui/button_top.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Unofficial The Great Ace Attorney fan art collaboration">
+    <meta name="keywords" content="The Great Ace Attorney, TGAA, Dai Gyakuten Saiban, DGS, Ace Attorney, art, fanart, collaboration">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    #intro{
+        font-size: 1.1em;
+    }
+
+    .sample-box{
+        text-align: center;
+    }
+
+    .sample-box img{
+        width: 80%;
+    }
+
+    #sample-pic img{
+        width: 50%;
+    }
+
+    @media (max-width: 1080px) {
+    .sample-box img, #sample-pic img{
+        width: 95%;
+        }
+    }
+</style>
+<body>
+    <div id="top-button" class="hover-pic" onclick="topFunction()"><img src="ui/button_top.png"></div>
+    <div class="grid-container">
+        <div class="header-box">
+            <div id="title-box">
+                <a href="/index.html"><img src="ui/banner_text.png"></a>
+            </div>
+                <span class="button"><a href="/index">Main</a></span>
+                <span class="button"><a href="/about">About</a></span>
+                <span class="button"><a href="/artists">Artists</a></span>
+                <span class="button"><a href="https://www.retrospring.net/tgaacollab">Ask</a></span>
+                <span class="button"><a href="https://www.twitter.com/tgaacollab">Twitter</a></span>
+        </div>
+        <div class="main-box">
+            <div class="body-text">
+                <p id="intro">To celebrate the 2 year anniversary of the English release of The Great Ace Attorney: Chronicles, we are hosting an <b>art collaboration featuring every character in the game</b>! This collaboration will be open to all artists no matter the skill level or experience; all we ask is that you are able to send a <b>full-body drawing with transparent background</b>.
+                <br><br>
+                The final collaboration will be hosted on this website. You'll be able to see all of the artwork together and click on the individual pieces to view them at full size and see artist info. We will also share the final collab as either an image or video on Twitter. Let's enjoy the anniversary of TGAA's release together!
+                </p>
+                <a href="https://docs.google.com/document/d/1pE2uGB-6hP-HiCSzC0i2eJLyjW6MmWxGUn2PQKG5QQA/edit?usp=sharing">The information on this page is also available as a Google document.</a>
+                <br><br>
+                <h3>Sign-up</h3>
+                <div class="info-box"><div id="info-box-border"></div>
+                    ✧ Sign-ups will open <b>April 1st</b> at 3 PM PST.
+                    <br>✧ Sign-ups are first come-first served and capped at <b>53 artists</b>. Sign-ups will close on <b>April 30th</b> or when 52 forms are received (it'll be through Google Forms).
+                    <br>✧ While sign-ups themselves are chosen by whoever fills the form first, <b>character assignments are not</b>. Assigned character(s) will only be sent via email at the end of the sign-up period.
+                    <br>✧ When you fill the form, you can write <b>at least 8 characters</b> you would be interested in drawing. You can also choose if you'd be OK with drawing any character or multiple characters (in case there aren't enough artists by the end of the sign-up period).
+                    <br>⠀⠀⠀⠀✧ Please include <b>at least 4 minor side characters</b> in your list! We're expecting most people will want to draw the main characters, but <b>we can only accept one artist per character</b>! If you could be as broad as possible with which characters you'd like to draw, that would be the best.
+                    <br>⠀⠀⠀⠀✧ Note that if you choose 'OK with drawing any character', you may be chosen to draw <i>any</i> of the characters shown here.
+                    <br>⠀⠀⠀⠀✧ In the case that we are unable to assign you to any of the characters you listed (and you did not select 'OK with drawing any character'), we will check if you are OK with drawing another available character.
+                    <br>✧ To see what will be on the sign-up form, <span onclick="openModal();currentSlide(2)" style="cursor:pointer"><u>click here</u></span>.
+                    <p><div class="sample-box"><img src="img/chart.webp" class="shadow"></div>
+                    </p>
+                </div>
+                <h3>Submission</h3>
+                <div class="info-box"><div id="info-box-border"></div>
+                    ✧ Once the sign-up period ends, we will email you your assigned character.
+                    <br>✧ We will send an email occasionally to remind you of the project, however there will be no formal check-in (you do not need to send WIPs unless you want).
+                    <br>✧ You have to send the final image by <b>June 30th</b>. Image requirements:
+                    <br>⠀⠀⠀⠀✧ Full-body drawing of the character in their 'regular' outfit
+                    <br>⠀⠀⠀⠀✧ At least 600×1000px and in color. It doesn't need to be shaded
+                    <br>⠀⠀⠀⠀✧ PNG format with transparent background
+                    <br>✧ In case you need to drop out of the project or need some extra time, please let us know as soon as possible.
+                </div>
+                <h3>Schedule</h3>
+                <div class="info-box"><div id="info-box-border"></div>
+                    ✧ <b>April 1st:</b> Sign-ups open
+                    <br>✧ <b>April 30th:</b> Sign-ups close (unless limit is reached earlier)
+                    <br>✧ <b>May 4th:</b> Emails/character assignment sent
+                    <br>✧ <b>June 30th:</b> Final image deadline
+                    <br>✧ <b>July 27th:</b> Collaboration released!
+                    <br>⠀⠀⠀⠀✧ After the release of the collab, you can post your final art with the hashtag <b>#TGAACollab</b> so we can RT it!
+                </div>
+
+                <h3>Questions</h3>
+                <div class="info-box"><div id="info-box-border"></div>
+                    <p><b>What will the website be like?</b>
+                        <br>All completed images will be viewable on the main page. You'll be able to click on the image to view it in full size and see artist info. The site will be revamped more in the following months to improve code and visuals. Here's a mockup for an idea:
+                        <div class="sample-box hover-pic" id="sample-pic"><img src="img/sample.webp" onclick="openModal();currentSlide(1)" class="shadow"></div>
+                    </p>
+                    <p><b>Who can join?</b>
+                        <br>Any artist over 13 years old can join, as long as you are able to fulfill the requirement of sending a full-body with transparent background! Previous experience in fan events is not required and skill level will not be taken into account.
+                    </p>
+                    <p><b>What if not all slots are filled by the end of the sign-up period?</b>
+                        <br>If there are enough artists who are OK with drawing multiple characters, we will proceed with featuring all characters. If there aren't enough artists for that, we will downscale and focus on main characters/major side characters only.
+                    </p>
+                    <p><b>What about characters with alternate designs?</b>
+                        <br>✧ For those with multiple 'regular' outfits: either one is fine (e.g. Kazuma's university uniform or prosecutor suit are both OK, Gina's thief or detective outfit are both OK)
+                        <br>✧ For those with hidden identities: Please draw the true form (e.g. Kazuma instead of the Masked Apprentice, Daley instead of Gossip)
+                        <br><br>If you want to, you can draw two versions of your assigned character with different canon outfit, expression, masked identity (for Kazuma/Daley/etc.). This alternate version will be visible upon hovering over the image.
+                    </p>
+                    <p><b>How are the characters for inclusion selected?</b>
+                        <br>It's based on the list of characters that appear in the 'Profiles' section of the Court Record in-game, excluding victims who did not interact with Ryunosuke as a playable character (so Pop Windibank is included as the player can interact with him, but John Wilson is not even though he interacted with Ryunosuke). Klint van Zieks, Genshin Asogi, and Lady Baskerville are also included for their story-relevance and connection to main characters (also because Lady B has more fans than half of the characters in TGAA).
+                        <br><br>
+                        If there is enough interest in drawing the aforementioned victim and jury-only characters, we can include them as well. These will be chibi only and are <i>in addition</i> to an artist's assigned character (no extra slots will be opened for these characters).
+                    </p>
+                    <p><b>Who is the organizer?</b>
+                        <br>Andrew (<a href="https://www.twitter.com/milaza_zo">milaza_zo</a>/<a href="https://www.twitter.com/milaza_dgs">milaza_dgs</a>). I keep saying we to sound more professional but it's just me. My favorite TGAA character is Barok (won't be drawing him for this project; I'll take whichever character is left over). Even though this might seem fancy, it’s very casual and for fun!!! I’m just extra and like coding websites which is why it’s like this instead of a regular digital zine.
+                    </p>
+
+                    <p><b>Any other questions?</b>
+                        <br>Feel free to DM on <a href="https://www.twitter.com/tgaacollab">Twitter</a> or send them to <a href="https://www.retrospring.net/tgaacollab">Retrospring</a> anonymously.
+                    </p>
+                </div>
+            </div>
+            
+        </div>  
+        <div class="footer-box">
+            <div id="footer">Unofficial The Great Ace Attorney fan collaboration.
+                <br>Background by @GarryKillian.
+            </div>
+        </div>
+      </div>
+
+    <!--LIGHTBOX-->
+    <div id="imgpopup" class="modal">
+            <div class="modal-content">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+
+                <div class="mySlides sample-box">
+                    <img src="img/sample.webp">
+                    <span class="modal-title">This will look cooler later I promise!!!</span><br><br>Artist info goes here.
+                    <br><br>The base code of the site is complete already so all that's left to do is add the images and pretty up the visuals~ Again this one's just a mockup. 
+                </div>
+
+                <div class="mySlides" id="sample-pic">
+                    <span class="modal-title">Form</span>
+                    <br><br>This is what will be on the form in case you want to prepare in advance.
+                    <br><br>
+                    <br>Contact Email
+                    <br>Credit Name (will be visible on page)
+                    <br>Credit link (will be visible on page; add up to three)
+                    <br>Write a list of at least 8 characters you would like to draw (must include at least 4 minor side characters)
+                    <br>Are you OK with drawing <i>any</i> character? (Yes/No)
+                    <br>Are you OK with drawing multiple characters? (Yes/No)
+                    <br>If you would like to draw a juror/other character <b>chibi</b> <i>in addition</i> to your main assigned character, select which one(s)
+                    <br><img src="img/chart2.webp">
+                </div>
+
+                 <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+    </div>
+
+    <script src="index.js"></script> 
+
+</body>
+</html>

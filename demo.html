@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="grid.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>test</title>
+    <link rel="icon" type="image/x-icon" href="ui/button_top.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Unofficial The Great Ace Attorney fan art collaboration">
+    <meta name="keywords" content="The Great Ace Attorney, TGAA, Dai Gyakuten Saiban, DGS, Ace Attorney, art, fanart, collaboration">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.17/interact.min.js"></script>
+</head>
+<body>
+  <div id="menu-button" class="screen-button" onclick="openMenu()">?</div>
+  <div id="top-button" class="screen-button" onclick="topFunction()">↑</div>
+  <a href="#chibi-content"><div id="bottom-button" class="screen-button">↓</div></a>
+  <div class="content" id="main-content">
+  <div class="chara-container">
+    <div class="chara-blank"></div><div class="chara-item grey" ></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="lazyemma710"></div> <!-- GRID 10-->
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="dewilacie"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div> <!-- CHARACTER 10, GRID 20-->
+    <div class="chara-blank"></div><div class="chara-item" id="rai"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div> <!-- GRID 30-->
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div> <!-- CHARACTER 20, GRID 40-->
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="ruti"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div> <!-- GRID 50-->
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div> <!-- CHARACTER 30, GRID 60-->
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="fuzzylily1"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="snivy"></div> <!-- GRID 70-->
+    <div class="chara-blank"></div><div class="chara-item" id="fenne"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="mina"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div> <!-- CHARACTER 40, GRID 80-->
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="spilledte"></div>
+    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="cocoreaux"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="agi"></div> <!-- GRID 90-->
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="valuabledoodles"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="black"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="spiderfriend"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="qopphy"></div> <!-- CHARACTER 50, GRID 100-->
+    <div class="chara-blank"></div><div class="chara-item" id="ryth"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="lucidmoone"></div>
+    <div class="chara-blank"></div><div class="chara-blank"></div><div class="chara-blank"></div>
+    <!-- MOBILE-->
+    <div class="chara-item2 mobile-only" id="handsome_kakigori"><img src="art/handsome_kakigori.webp" onclick="openModal();currentSlide(53)"></div> <!-- CHARACTER 53, GRID 106-->
+    <div class="chara-blank mobile-only"></div>
+    <div class="chara-item2 mobile-only" id="masa"><img src="art/masa.webp" onclick="openModal();currentSlide(54)"></div> <!-- CHARACTER 54, GRID 108-->
+    <!--DESKTOP-->
+    <div class="chara-blank desktop-only"></div><div class="chara-blank desktop-only"></div><div class="chara-blank desktop-only"></div><div class="chara-blank desktop-only"></div>
+    <div class="chara-item2 desktop-only" id="handsome_kakigori"><img src="art/handsome_kakigori.webp" onclick="openModal();currentSlide(53)"></div> <!-- CHARACTER 53, GRID 106-->
+    <div class="chara-blank desktop-only"></div>
+    <div class="chara-item2 desktop-only" id="masa"><img src="art/masa.webp" onclick="openModal();currentSlide(54)"></div> <!-- CHARACTER 54, GRID 108-->
+  </div>
+</div>
+<div class="content" id="chibi-content">
+  <!-- CHIBI--><br>
+  <div class="chibi-container">
+    <div class="chibi-item"><img src="art/baby.webp" onclick="openModal();currentSlide(41)"></div>
+    <div class="chibi-item" id="barber"><img src="art/spiderfriend-sm.webp" onclick="openModal();currentSlide(49)"></div>
+    <div class="chibi-item"><img src="art/fuzzylilly1-sm.webp" onclick="openModal();currentSlide(32)"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item" id="laborer"><img src="art/m-sm.webp" onclick="openModal();currentSlide(20)"></div>
+    <div class="chibi-item" id="stereoscopefan"><img src="art/rai-sm.webp" onclick="openModal();currentSlide(11)"></div>
+    <div class="chibi-item" id="surgeon"><img src="art/shu-sm.webp" onclick="openModal();currentSlide(32)"></div>
+    <div class="chibi-item" id="middleagedman"><img src="art/snivy-sm.webp" onclick="openModal();currentSlide(35)"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item" id="policeman"><img src="art/jules-sm.webp" onclick="openModal();currentSlide(18)"></div>
+    <div class="chibi-item" id="younggirl"><img src="art/lazyemma710-sm.webp" onclick="openModal();currentSlide(5)"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item" id="elderlywoman"><img src="art/ace-sm.webp" onclick="openModal();currentSlide(34)"></div>
+    <div class="chibi-item" id="johnwilson"><img src="art/fenne-sm.webp" onclick="openModal();currentSlide(36)"></div>
+    <div class="chibi-item" id="masonmilverton"><img src="art/qopphy-sm.webp" onclick="openModal();currentSlide(50)"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item" id="duncanross"><img src="art/quinn-sm.webp" onclick="openModal();currentSlide(24)"></div>
+    <div class="chibi-item" id="selden"><img src="art/mina-sm.webp" onclick="openModal();currentSlide(37)"></div>
+    <div class="chibi-item"><img src="art/baby.webp"></div>
+  </div>
+</div>
+<!--LIGHTBOX-->
+
+<div id="imgpopup" class="modal">
+  <div class="modal-content">
+      <span class="close cursor" style="z-index: 10;" onclick="closeModal()">&times;</span>
+      <div id="slide-parent"></div>
+       <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+<div id="menupopup" class="modal">
+  <div class="modal-content" id="menu">
+      <span class="close cursor" onclick="closeMenu()">&times;</span>
+      <div class="modal-textbox"><div class="comment" style="font-size: 1.2em; font-style: normal;">
+        Welcome to the The Great Ace Attorney Art Collaboration! This collab celebrates the 2nd anniversary of TGAA's localization with artwork of every character in the game drawn by 54 different artists. Click on the individual characters to see artist credit as well as alternate images. Thank you so much for taking a look at this collab!
+      </div>
+      </div>
+      <br>
+      <!--MOD NOTE-->
+      <div class="modal-textbox tabcontent" id="Note"><div class="modal-title chara-title">Note</div>
+        <div class="comment" style="text-align: left; font-style: normal;"><img src="ui/button_top.png" style="float:right; width: 10%;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida mauris ac eros rutrum, vel feugiat leo venenatis. Duis sed congue leo. Vestibulum vitae molestie neque. Pellentesque maximus metus lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam elementum nisi at dolor dapibus consectetur. In rutrum, turpis nec varius varius, nunc diam ullamcorper leo, in mollis neque eros accumsan nisi. Nunc turpis enim, rhoncus eget tellus ac, imperdiet imperdiet tellus. Duis non dui vel odio mattis gravida ac tincidunt magna. Curabitur varius venenatis malesuada.
+          <br><br><b><a href="https://github.com/milazazo/tgaacollab">Check the Github repo for updates and to-do list!</a></b> (Won't be updated further until late June)
+        </div>
+      </div>
+      <!--ARTISTS-->
+      <div class="modal-textbox tabcontent" id="Artists"><div class="modal-title chara-title">Artists</div>
+      <div class="comment" id="artists-parent" style="text-align: center; font-style: normal;">
+      </div>
+    </div>
+
+      <!--LINKS-->
+      <div class="modal-textbox tabcontent" id="Links"><div class="modal-title chara-title">Links</div>
+      <div class="comment" style="text-align: center; font-style: normal;">
+        <div class="soclink-box" id="link-links"><a href="https://www.twitter.com/tgaacollab"><div class="soclink twitter">Twitter</div></a>  <a href="https://tgaacollab.tumblr.com"><div class="soclink tumblr">Tumblr</div></a>  <a href="https://www.retrospring.net/tgaacollab"><div class="soclink website">Retrospring</div></a></div>
+
+        <p style="text-align: center">
+          <table style="margin-left: auto; margin-right: auto;">
+            <tr>
+              <td><img src="ui/button.png" style="-webkit-filter: drop-shadow(0px 0px 5px white);filter: drop-shadow(0px 0px 5px white);"></td>
+              <td><textarea><a href="https://tgaacollab.github.io/"><img src="https://tgaacollab.github.io/ui/button.png"></a></textarea></td>
+            </tr>
+          </table>
+        </p>
+      </div>
+    </div>
+
+
+      <div class="soclink-box" id="menu-links"><div class="soclink tablinks" onclick="openTab(event, 'Note')" id="defaultOpen">Note</div>  <div class="soclink tablinks" onclick="openTab(event, 'Artists')">Artists</div>  <div class="soclink tablinks" onclick="openTab(event, 'Links')">Links</div></div>      
+  </div>
+</div>
+<script src="index.js"></script> 
+<script src="array.js"></script> 
+<script>characterArray();
+artistListing();
+document.getElementById("defaultOpen").click();
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // here you tell InteractJS which class of items you'd like to be draggable
+  interact('.chibi-item')
+    .draggable({
+      listeners: {
+        // when a user drags the object ('on dragmove') run this function
+        move: dragMoveListener,
+        // call this function on every dragend event
+        end (event) {
+          console.log("item dropped!")
+        }
+      }
+    })
+
+  function dragMoveListener (event) {
+    // all this stuff gets the position of the item while it's being dragged
+    var target = event.target
+    // keep the dragged position in the data-x/data-y attributes
+    var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+    var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+    // translate the element
+    target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+    // update the position attributes
+    target.setAttribute('data-x', x)
+    target.setAttribute('data-y', y)
+  }
+
+  // this function is used later in the resizing and gesture demos
+  window.dragMoveListener = dragMoveListener
+
+</script>
+</body>
+</html>

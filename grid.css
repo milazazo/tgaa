@@ -332,6 +332,10 @@ display: none;
   content:url("art/rai-2.webp");
 }
 
+#erin img:hover{
+  content:url("art/03rin-2.webp");
+}
+
 #cocoreaux img:hover{
   content:url("art/cocoreaux-2.webp");
 }
@@ -362,7 +366,7 @@ display: none;
       left: -70px;
     }
 
-    #modal-chibi-lazyemma710, #modal-chibi-rai {
+    #modal-chibi-lazyemma710, #modal-chibi-rai, #modal-chibi-03rin {
       left: 44vw;
     }
 

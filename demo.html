@@ -18,7 +18,7 @@
   <a href="#chibi-content"><div id="bottom-button" class="screen-button">↓</div></a>
   <div class="content" id="main-content">
   <div class="chara-container">
-    <div class="chara-blank"></div><div class="chara-item grey" ></div>
+    <div class="chara-blank"></div><div class="chara-item" ></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
@@ -30,23 +30,23 @@
     <div class="chara-blank"></div><div class="chara-item"></div> <!-- CHARACTER 10, GRID 20-->
     <div class="chara-blank"></div><div class="chara-item" id="rai"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
-    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="hoshidensha"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div> <!-- GRID 30-->
     <div class="chara-blank"></div><div class="chara-item grey"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
-    <div class="chara-blank"></div><div class="chara-item"></div> <!-- CHARACTER 20, GRID 40-->
+    <div class="chara-blank"></div><div class="chara-item" id="m"></div> <!-- CHARACTER 20, GRID 40-->
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item" id="ruti"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item"></div> <!-- GRID 50-->
-    <div class="chara-blank"></div><div class="chara-item grey"></div>
-    <div class="chara-blank"></div><div class="chara-item grey"></div>
     <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
+    <div class="chara-blank"></div><div class="chara-item"></div>
     <div class="chara-blank"></div><div class="chara-item grey"></div> <!-- CHARACTER 30, GRID 60-->
     <div class="chara-blank"></div><div class="chara-item" id="erin"></div>
     <div class="chara-blank"></div><div class="chara-item" id="fuzzylily1"></div>
@@ -60,7 +60,7 @@
     <div class="chara-blank"></div><div class="chara-item grey"></div> <!-- CHARACTER 40, GRID 80-->
     <div class="chara-blank"></div><div class="chara-item grey"></div>
     <div class="chara-blank"></div><div class="chara-item" id="spilledte"></div>
-    <div class="chara-blank"></div><div class="chara-item grey"></div>
+    <div class="chara-blank"></div><div class="chara-item" id="kovv"></div>
     <div class="chara-blank"></div><div class="chara-item" id="cocoreaux"></div>
     <div class="chara-blank"></div><div class="chara-item" id="agi"></div> <!-- GRID 90-->
     <div class="chara-blank"></div><div class="chara-item"></div>
@@ -88,8 +88,8 @@
     <div class="chibi-item"><img src="art/baby.webp" onclick="openModal();currentSlide(41)"></div>
     <div class="chibi-item" id="barber"><img src="art/spiderfriend-sm.webp" onclick="openModal();currentSlide(49)"></div>
     <div class="chibi-item"><img src="art/fuzzylilly1-sm.webp" onclick="openModal();currentSlide(32)"></div>
-    <div class="chibi-item"><img src="art/baby.webp"></div>
-    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/kovv-sm.webp" onclick="openModal();currentSlide(43)"></div>
+    <div class="chibi-item"><img src="art/novelocks-sm.webp" onclick="openModal();currentSlide(26)"></div>
     <div class="chibi-item"><img src="art/baby.webp"></div>
     <div class="chibi-item"><img src="art/baby.webp"></div>
     <div class="chibi-item" id="laborer"><img src="art/m-sm.webp" onclick="openModal();currentSlide(20)"></div>
@@ -100,7 +100,7 @@
     <div class="chibi-item"><img src="art/baby.webp"></div>
     <div class="chibi-item" id="policeman"><img src="art/jules-sm.webp" onclick="openModal();currentSlide(18)"></div>
     <div class="chibi-item" id="younggirl"><img src="art/lazyemma710-sm.webp" onclick="openModal();currentSlide(5)"></div>
-    <div class="chibi-item"><img src="art/baby.webp"></div>
+    <div class="chibi-item"><img src="art/hoshidensha-sm.webp" onclick="openModal();currentSlide(13)"></div>
     <div class="chibi-item" id="guildmaster"><img src="art/kate-sm.webp" onclick="openModal();currentSlide(15)"></div>
     <div class="chibi-item" id="elderlywoman"><img src="art/ace-sm.webp" onclick="openModal();currentSlide(34)"></div>
     <div class="chibi-item" id="johnwilson"><img src="art/fenne-sm.webp" onclick="openModal();currentSlide(36)"></div>
@@ -152,7 +152,8 @@
         <div class="soclink-box" id="link-links"><a href="https://www.twitter.com/tgaacollab"><div class="soclink twitter">Twitter</div></a>  <a href="https://tgaacollab.tumblr.com"><div class="soclink tumblr">Tumblr</div></a>  <a href="https://www.retrospring.net/tgaacollab"><div class="soclink website">Retrospring</div></a></div>
 
         <p style="text-align: center;-webkit-filter: drop-shadow(0px 0px 2px white);filter: drop-shadow(0px 0px 2px white);">
-          <img src="img/ButtonBig_Asogi.png"><img src="img/ButtonSmall_Asogi.png">
+          <img src="https://images.squidge.org/images/2023/07/07/tgaacollab_buttonbig_ryunosuke.png"><img src="https://images.squidge.org/images/2023/07/02/tgaacollab_buttonbig_asogi.png">
+          <br><img src="https://images.squidge.org/images/2023/07/07/tgaacollab_buttonsmall_ryunosuke.png"><img src="https://images.squidge.org/images/2023/07/02/tgaacollab_buttonsmall_asogi.png">
         </p>
       </div>
     </div>

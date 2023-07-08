@@ -336,6 +336,10 @@ display: none;
   content:url("art/03rin-2.webp");
 }
 
+#kovv img:hover{
+  content:url("art/kovv-2.webp");
+}
+
 #cocoreaux img:hover{
   content:url("art/cocoreaux-2.webp");
 }
@@ -377,6 +381,14 @@ display: none;
     /* INDIVIDUAL SPACING: DESKTOP */
     #dewilacie{
       top: -40px;
+    }
+
+    #hoshidensha{
+      left: 45px;
+    }
+
+    #m{
+      left: -20px;
     }
 
     #fuzzylily1{

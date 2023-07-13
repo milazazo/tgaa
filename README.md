@@ -5,18 +5,18 @@ Art collaboration for The Great Ace Attorney. Live page is viewable at [demo](ht
 - [x] **Add placeholder images**
 - [ ] **Add loading screen**
 - [ ] Add loading animation
-- [x] Make chibi characters draggable
+- [x] ~~Make chibi characters draggable~~
 - [x] **Make chibi characters clickable (and add them to credits)**
 - [ ] **Update UI images**
   - Pretty up the module buttons
   - Update bottom-right buttons to be more visible
 - [ ] Replace mySlides with something else lol
-- [ ] Make new button/banner (no one else is going to use this)
+- [x] Make new button/banner (no one else is going to use this)
 - [ ] **Fix mobile spacing**
 - [ ] **Add all images**
 - [x] **Add hover images and chibi images to main image modal**
-- [ ] **Optimize all images (resize, compress, convert to .webp)**
-- [ ] **Fix commas and quotes on captions**
+- [x] **Optimize all images (resize, compress, convert to .webp)**
+- [x] **Fix commas and quotes on captions**
 - [ ] Make popup chibis relative to image instead of overall div
 
 ## Other

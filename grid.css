@@ -291,13 +291,13 @@ animation-delay: 1.75s;
 
 #chibi-content{
   transform: translateY(50vh);
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10vh;
 }
 
-.chibi-container {
-  display: grid;
-  grid-template-columns: repeat(12, 7vw);
-  margin: auto;
-  margin-bottom: 10vh;
+.chibi-item {
+  display: inline;
 }
 
 .chibi-item img{
@@ -322,6 +322,10 @@ display: none;
 /* HOVER */
 #lazyemma710 img:hover{
   content:url("art/lazyemma710-2.webp");
+}
+
+#glittergoats img:hover{
+  content:url("art/glittergoats-2.webp");
 }
 
 #heavendraven img:hover{
@@ -577,14 +581,8 @@ display: none;
     transform: translateY(30vh);
   }
 
-  .chibi-container {
-    display: grid;
-    grid-template-columns: repeat(4, 20vw);
-    margin: auto;
-  }
   
   .chibi-item img{
-    display: block;
     width: 20vw;
   }
 

@@ -7,7 +7,7 @@ Art collaboration for The Great Ace Attorney. Live page is viewable at [demo](ht
 - [ ] Add loading animation
 - [x] ~~Make chibi characters draggable~~
 - [x] **Make chibi characters clickable (and add them to credits)**
-- [ ] **Update UI images**
+- [x] **Update UI images**
   - Pretty up the module buttons
   - Update bottom-right buttons to be more visible
 - [ ] Replace mySlides with something else lol

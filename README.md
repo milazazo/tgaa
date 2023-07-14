@@ -10,7 +10,7 @@ Art collaboration for The Great Ace Attorney. Live page is viewable at [demo](ht
 - [x] **Update UI images**
   - Pretty up the module buttons
   - Update bottom-right buttons to be more visible
-- [ ] Replace mySlides with something else lol
+- [x] Replace mySlides with something else lol
 - [x] Make new button/banner (no one else is going to use this)
 - [x] **Fix mobile spacing**
 - [ ] **Add all images**

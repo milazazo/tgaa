@@ -133,8 +133,8 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 45%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -148,12 +148,12 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 20vw;
   transform: rotate(-90deg);
 }
 
 .prev {
-  left: 0;
+  left: 20vw;
   transform: rotate(90deg);
 }
 
@@ -190,9 +190,10 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   padding: 10px;
 }
 
-.mySlides{
+.slides{
   margin-bottom: 1em;
-
+  opacity: 0.5;
+  animation: fadeInAnimation ease 1s;animation-delay: 0s;animation-iteration-count: 1;animation-fill-mode: forwards;
 }
 
 .solo-img, .double-img{ /* For setting the gear background */
@@ -380,7 +381,6 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   border-style: solid;
   border-width: 1px;
   border-color: #a88456;
-
   color: #d1ac7c;;
   padding: 1em;
   margin: 1em;
@@ -476,6 +476,10 @@ display: none;
 
 @media (min-width: 1080px) {
 
+  .slides{
+    overflow-y: hidden;
+  }
+
   .chara-item img, .chara-item2 img {
     left: -5vw;
     }
@@ -557,6 +561,16 @@ display: none;
   .artist{
     margin-top: 0.3em;
     margin-bottom: 0.3em;
+  }
+
+  .next {
+    right: 1vw;
+    transform: rotate(-90deg);
+  }
+  
+  .prev {
+    left: 1vw;
+    transform: rotate(90deg);
   }
 
   .prev img, .next img{

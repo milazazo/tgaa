@@ -31,7 +31,7 @@ function characterArray() {
       
     for (let i = 0; i < characterArray.length; i++) {
         let slideDiv = document.createElement('div');
-        slideDiv.className = 'mySlides';
+        slideDiv.className = 'slides';
         slides.appendChild(slideDiv);
     }
 
@@ -39,14 +39,14 @@ function characterArray() {
     // CHARACTER ARTWORK
 
     const charaArt = document.querySelectorAll(".chara-item");
-    const slideBox = document.querySelectorAll(".mySlides");
+    const slideBox = document.querySelectorAll(".slides");
     charaArt.forEach((box, index) => {
         box.innerHTML = `<img src="art/` + characterArray[index].artist.toLowerCase() +`.webp" onclick="openModal();currentSlide(`+ [index+1] +`)">`;
       });
 
     // SLIDE BOXES
 
-    slideBox.forEach((box, index) => { // For each instance of the class ".mySlides" (slideBox)
+    slideBox.forEach((box, index) => { // For each instance of the class ".slides" (slideBox)
         let description = ""; // Check if there's a description
         if (characterArray[index].hasOwnProperty("description")) {
             description += characterArray[index].description; // If there is a description, display it

@@ -579,6 +579,10 @@ display: none;
   .modal-content {
     width: 98vw;
   }
+  
+  .modal-textbox{
+    width: 95%;
+  }
 
   .solo-img, .double-img{ /* For setting the gear background */
     background-size: 100%;

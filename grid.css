@@ -521,6 +521,18 @@ display: none;
 }
 
 @media (min-width: 810px) and (max-width: 1340px)  {
+  #loading-screen{
+    background-color: white;
+  }
+
+  #logo img{
+    display: none;
+  }
+
+  #loading-gear{
+    display: none;
+  }
+  
   .modal-content {
     width: 80vw;
   }

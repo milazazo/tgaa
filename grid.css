@@ -525,7 +525,7 @@ display: none;
 
   .chara-item img, .chara-item2 img {
     width: 45vw; /*move shit to the left later*/
-    left: -14vw;
+    left: -16vw;
   }
 
   .chara-container > div:nth-child(-n+7) {grid-row: 1;}
@@ -552,6 +552,29 @@ display: none;
     width: 27vw;
   }
 
+    /* INDIVIDUAL SPACING: MOBILE */
+    #wanyuu{left:10px;}
+    #lazyemma710{top: -20px}
+    #eightfivesix{scale: 1.1;top: -8px}
+    #dewilacie{top: -40px;}
+    #hoshidensha{left: 45px;}
+    #m{left: -20px;}
+    #dragonofshades{top:-20px;}
+    #fuzzylily1{left: 20px;top: -25px;}
+    #shu{left: 30px}
+    #snivy{top: 35px;}
+    #fenne{top:10px;left: 30px;scale: 1.15;}
+    #mina{left: -5px;}
+    #shifting-fixations{top: 20px;left:-20px;}
+    #spilledte{top: -20px;}
+    #qopphy{left: 20px;}
+    #ryth{scale: 1.1;}
+    #cocoreaux{left: 0px;}
+    #agi{left: 20px;}
+    #valuabledoodles{top: -10px;}
+    #lucidmoone{scale: 1.05;left:20px;}
+    #handsome_kakigori{top: 20px;left:-10px;scale: 1.1;}
+    #masa{left:10px;top: 30px;}  
 }
 
 /* HOVER */

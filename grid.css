@@ -476,7 +476,7 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
 display: none;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1340px) {
 
   .slides{
     overflow-y: hidden;
@@ -518,8 +518,60 @@ display: none;
     #masa{top: 30px;}
 }
 
+@media (min-width: 810px) and (max-width: 1340px)  {
+  .next {
+    right: 5vw;
+    transform: rotate(-90deg);
+  }
+  
+  .prev {
+    left: 5vw;
+    transform: rotate(90deg);
+  }
+      .double-img{
+        margin-bottom: 80vh;
+      }
+      .solo-img .chibi-img{
+        top: -35vh;
+        left: 20vw;
+      }
+      
+      .double-img .chibi-img{
+        top: -115vh;
+        left: 20vw;
+      }
 
-@media (max-width: 1080px) {
+      .chara-item img, .chara-item2 img {
+        left: -5vw;
+        }
+
+      /* INDIVIDUAL SPACING: DESKTOP */
+      #lazyemma710{top: -20px}
+      #eightfivesix{scale: 1.1;top: -8px}
+      #dewilacie{top: -40px;}
+      #hoshidensha{left: 45px;}
+      #m{left: -20px;}
+      #dragonofshades{top:-20px;left:-40px}
+      #fuzzylily1{left: 20px;top: -25px;}
+      #shu{left: 20px}
+      #snivy{top: 35px;}
+      #fenne{top:10px;left: 30px;scale: 1.15;}
+      #mina{left: -5px;}
+      #shifting-fixations{top: 20px;left:-20px;}
+      #spilledte{top: -10px;}
+      #qopphy{left: 20px;}
+      #ryth{scale: 1.1;}
+      #cocoreaux{left: -20px;}
+      #agi{left: 20px;top: -15px;}
+      #valuabledoodles{top: -10px;}
+      #lucidmoone{scale: 1.05;}
+      #handsome_kakigori{top: 10px;scale: 1.1;}
+      #masa{top: 30px;}
+}
+
+
+
+@media (max-width: 810px) {
 
   .desktop-only{display: none;}
   .mobile-only{display: block;}

@@ -82,7 +82,7 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
-  top: 40%;
+  top: 35%;
   z-index: 100;
   animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
 }

@@ -21,7 +21,8 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   bottom: 2vh;
   cursor: pointer;
   z-index: 1;
-  opacity: 0%;animation: fadeInAnimation ease 1s;animation-delay: 3.75s;animation-iteration-count: 1;animation-fill-mode: forwards;
+  opacity: 0;
+  opacity: 0%; animation: fadeInAnimation ease 1s;animation-delay: 3.75s;animation-iteration-count: 1;animation-fill-mode: forwards;
 }
 
 .screen-button img{
@@ -94,8 +95,9 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
-  z-index: 95;
+  top: -44vh;
+  width: 100%;
+  z-index: -5;
   animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
   animation: rotation 12s infinite linear;
 }
@@ -522,19 +524,16 @@ display: none;
   .desktop-only{display: none;}
   .mobile-only{display: block;}
 
+  #loading-screen{
+    background-color: white;
+  }
+
   #logo img{
     display: none;
   }
 
   #loading-gear{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: 12%;
-    width: 80%;
-    z-index: 95;
-    animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
-    animation: rotation 12s infinite linear;
+    display: none;
   }
   
   #menu{

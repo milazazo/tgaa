@@ -54,20 +54,27 @@ function characterArray() {
             description += ``;
         }
 
-        let title = ""; // Check if there's a chibi
+        let title = ""; 
         let chibiart = "";
+        let art = ""; 
         if (characterArray[index].chibi !== '') {
-            title += characterArray[index].character + " and " + characterArray[index].chibi; // If there is a chibi, display it
-            chibiart += `<img src="art/`+ characterArray[index].artist.toLowerCase() +`-sm.webp" class="chibi-img" id="modal-chibi-`+ characterArray[index].artist.toLowerCase() +`">`;
+            if (characterArray[index].alt !== '') { // Chibi + alt art --> chibi in title, chibi art, alternate art
+                title += characterArray[index].character + " and " + characterArray[index].chibi;
+                art += `<div class="double-img"><img src="art/`+ characterArray[index].artist.toLowerCase() +`.webp" class="modal-img1"> <img src="art/`+ characterArray[index].artist.toLowerCase() +`-2.webp" class="modal-img2"><img src="art/`+ characterArray[index].artist.toLowerCase() +`-sm.webp" class="chibi-img" id="modal-chibi-`+ characterArray[index].artist.toLowerCase() +`"></div>`
+            }
+            else{ // Chibi + no alt art --> chibi in title, chibi art
+                title += characterArray[index].character + " and " + characterArray[index].chibi;
+                art += `<div class="solo-img"><img src="art/`+ characterArray[index].artist.toLowerCase() +`.webp" class="modal-img"><img src="art/`+ characterArray[index].artist.toLowerCase() +`-sm.webp" class="chibi-img" id="modal-chibi-`+ characterArray[index].artist.toLowerCase() +`"></div>`;
+            }
         } else {
-            title += characterArray[index].character;
-        }
-
-        let art = ""; // Check if there's an alt art
-        if (characterArray[index].alt !== '') {
-            art += `<img src="art/`+ characterArray[index].artist.toLowerCase() +`.webp" class="front-img1"> <img src="art/`+ characterArray[index].artist.toLowerCase() +`-2.webp" class="front-img2">`
-        } else {
-            art += `<img src="art/`+ characterArray[index].artist.toLowerCase() +`.webp" class="front-img">`;
+            if (characterArray[index].alt !== '') { // No chibi + alt art --> default title, alternate art
+                title += characterArray[index].character;
+                art += `<div class="double-img"><img src="art/`+ characterArray[index].artist.toLowerCase() +`.webp" class="modal-img1"> <img src="art/`+ characterArray[index].artist.toLowerCase() +`-2.webp" class="modal-img2"></div>`
+            }
+            else { // No chibi + no alt art --> default title, nothing else
+                title += characterArray[index].character;
+                art += `<div class="solo-img"><img src="art/`+ characterArray[index].artist.toLowerCase() +`.webp" class="modal-img"></div>`;
+            }
         }
 
         let twitter = ""; // Check if there's a Twitter
@@ -99,8 +106,7 @@ function characterArray() {
         }
 
         box.innerHTML = 
-        art + chibiart +
-        `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">`+ twitter + tumblr + instagram + website +`</div>`;
+        art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">`+ twitter + tumblr + instagram + website +`</div>`;
       });
  
     });

@@ -17,7 +17,7 @@ Art collaboration for The Great Ace Attorney. Live page is viewable at [demo](ht
 - [x] **Add hover images and chibi images to main image modal**
 - [x] **Optimize all images (resize, compress, convert to .webp)**
 - [x] **Fix commas and quotes on captions**
-- [ ] Make popup chibis relative to image instead of overall div
+- [x] Make popup chibis relative to image instead of overall div
 
 ## Other
 * If you have any suggestions (code-wise or other), feel free to tell me unless it's already noted in the to-do list above

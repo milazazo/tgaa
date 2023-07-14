@@ -164,7 +164,6 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   margin: auto;
   padding: 0;
   padding-top: 2vh;
-  width: 60vw;
   max-width: 1200px;
   text-align: center;
   font-size: 1em;
@@ -477,6 +476,9 @@ display: none;
 }
 
 @media (min-width: 1340px) {
+  .modal-content {
+    width: 60vw;
+  }
 
   .slides{
     overflow-y: hidden;
@@ -519,6 +521,14 @@ display: none;
 }
 
 @media (min-width: 810px) and (max-width: 1340px)  {
+  .modal-content {
+    width: 80vw;
+  }
+  
+  .modal-textbox{
+    width: 95%;
+  }
+
   .next {
     right: 5vw;
     transform: rotate(-90deg);

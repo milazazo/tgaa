@@ -3,8 +3,8 @@ Art collaboration for The Great Ace Attorney. Live page is viewable at [demo](ht
 
 ## To-do
 - [x] **Add placeholder images**
-- [ ] **Add loading screen**
-- [ ] Add loading animation
+- [x] **Add loading screen**
+- [x] Add loading animation
 - [x] ~~Make chibi characters draggable~~
 - [x] **Make chibi characters clickable (and add them to credits)**
 - [x] **Update UI images**

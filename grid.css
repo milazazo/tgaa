@@ -75,6 +75,7 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   background-color: #a88456;
   z-index: 90;
   animation: fadeOutAnimation ease 1s;animation-delay: 2.25s;animation-iteration-count: 1;animation-fill-mode: forwards;
+  display: none; /* DELETE LATER */
 }
 
 #loading-logo{
@@ -85,6 +86,7 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   top: 35%;
   z-index: 100;
   animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
+  display: none; /* DELETE LATER */
 }
 
 #loading-logo img{
@@ -100,6 +102,7 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   z-index: -5;
   animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
   animation: rotation 12s infinite linear;
+  display: none; /* DELETE LATER */
 }
 
 #loading-gear img{
@@ -122,8 +125,6 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
 }
 
 .close:hover, .close:focus {
-  color: #999;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -469,6 +470,59 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   -webkit-transform: scale(1.1); transform: scale(1.1);
   -webkit-filter: drop-shadow(0px 0px 5px #ec9718); filter: drop-shadow(0px 0px 5px #ec9718);
   cursor: pointer;
+}
+
+/* CATS */
+#wagahai {
+  background-color: #4980994b;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a88456;
+  color: #d1ac7c;;
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.secret-kitty{
+  scale: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.secret-kitty:hover{
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.secret-kitty img{
+  width: 50px;
+}
+
+.cats {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.cat-icon {
+  display: none;
+  padding: none;
+  margin: none;
+}
+
+.cats img{
+  width: 30px;
+}
+
+.cats:hover, .cats:focus {
+  cursor: pointer;
+}
+
+.modal-cat {
+  display: none;
 }
 
 .mobile-only{

@@ -21,7 +21,8 @@ function characterArray() {
         instagram: values[7],
         website: values[8],
         websitename: values[9],
-        description: values[10]
+        description: values[10],
+        kitty: values[11],
     };
     });
     console.log(characterArray);
@@ -105,8 +106,15 @@ function characterArray() {
             website += ``;
         }
 
+        let kitten = ""; // Check if there's a secret kitty
+        if (characterArray[index].kitty !== '') {
+            kitten += characterArray[index].kitty; // If there is a kitten, display it
+        } else {
+            kitten += ``;
+        }
+
         box.innerHTML = 
-        art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">`+ twitter + tumblr + instagram + website +`</div>`;
+        art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">`+ twitter + tumblr + instagram + website +`</div>` + kitten;
       });
  
     });
@@ -136,7 +144,8 @@ function characterArray() {
         instagram: values[7],
         website: values[8],
         websitename: values[9],
-        description: values[10]
+        description: values[10],
+        kitty: values[11]
     };
     });
     console.log(characterArray);
@@ -197,3 +206,72 @@ function openMenu() {
   function closeMenu() {
     document.getElementById("menupopup").style.display = "none";
   }
+
+  function openKitties() {
+    document.getElementById("kittypopup").style.display = "block";
+  }
+  
+  // Close the Modal
+  function closeKitties() {
+    document.getElementById("kittypopup").style.display = "none";
+  }
+
+var cats = 0;
+var firstCatFound = 0; var secondCatFound = 0; var thirdCatFound = 0;
+const congrats = document.getElementById('congrats');
+const wagahai = document.getElementById('wagahai');
+
+function kittyFound1() {
+    if (firstCatFound == 0){
+        document.getElementById("cat-icon1").style.display = "inline-block";
+        document.getElementById("modal-cat1").style.display = "inline-block";
+        document.getElementById("cat1").style.display = "none";
+        cats = cats + 1;
+        firstCatFound = 1;
+        console.log(cats);
+        kittiesCollected();
+    }
+    else {
+        return;
+    }
+  }
+
+function kittyFound2() {
+    if (secondCatFound == 0){
+        document.getElementById("cat-icon2").style.display = "inline-block";
+        document.getElementById("modal-cat2").style.display = "inline-block";
+        document.getElementById("cat2").style.display = "none";
+        cats = cats + 1;
+        secondCatFound = 1;
+        console.log(cats);
+        kittiesCollected();
+    }
+    else {
+        return;
+    }
+  }
+
+function kittyFound3() {
+    if (thirdCatFound == 0){
+        document.getElementById("cat-icon3").style.display = "inline-block";
+        document.getElementById("modal-cat3").style.display = "inline-block";
+        document.getElementById("cat3").style.display = "none";
+        cats = cats + 1;
+        thirdCatFound = 1;
+        console.log(cats);
+        kittiesCollected();
+    }
+    else {
+        return;
+    }
+  }
+
+function kittiesCollected() {
+    if (cats == 3){
+        console.log("you found all the cats :D");
+        congrats.innerHTML = "Congratulations, you found all of Wagahai's kittens!"
+        wagahai.innerHTML = "<b>Wagahai says:</b> Meow meow meow! (Thanks for finding my kittens!)"
+    }
+}
+
+

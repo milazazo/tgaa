@@ -109,15 +109,9 @@ function characterArray() {
         art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">` + twitter + tumblr + instagram + website + `</div>`;
       });
 
-      for (let i = 0; i < characterArray.length; i++) {
-        let slideDiv = document.createElement('div');
-        slideDiv.className = 'slides';
-        slides.appendChild(slideDiv);
-    }
-
     for (let i = 1; i < 4; i++) {
         var randomCat = Math.floor(Math.random()*slideBox.length);
-        console.log("kitty " + i + "can be found at: " + randomCat);
+        console.log("kitty " + i + " can be found at: " + randomCat);
         const catBox = slideBox[randomCat];
         let randomCathtml = `<div class="secret-kitty" id="cat` + i + `" onclick="kittyFound(` + i + `)"><img src="art/cat`+ i +`.png"></div>`
         catBox.innerHTML += randomCathtml;

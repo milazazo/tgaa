@@ -11,7 +11,7 @@
 11,Iyesa Nosa,Stereoscope Fan,alt,Rai,auqroix,auqroix,auqroix,,,ai-also-do nosa!!,
 12,Kyurio Korekuta,Tchikin Strogenov,,milaza,milaza_zo,milaza,,https://www.milaza.art,Website,thanks for taking a look at this collab! if you liked it‚ please stream <a href="https://open.spotify.com/track/61B27d2YE1tLeSgr6VBUai?si=e14919ca021b438f">your nobility</a> on spotify,
 13,Jezaille Brett,Banker,,HoshiDensha,HoshiDensha,HoshiDensha,HoshiDensha,,,"Gaslight‚ Gatekeep‚ Girlboss" - Jezaille Brett‚ probably,
-14,Bif Strogenov,,,Annie-Mae,Anime27Arts,,,,,"You cannot make your password 'Bif.' It simply is not Strogenov." -someone on the SS Burya probably,<div class="secret-kitty" id="cat3" onclick="kittyFound3()"><img src="art/cat3.png"></div>
+14,Bif Strogenov,,,Annie-Mae,Anime27Arts,,,,,"You cannot make your password 'Bif.' It simply is not Strogenov." -someone on the SS Burya probably,<div class="secret-kitty" id="cat3" onclick="kittyFound(3)"><img src="art/cat3.png"></div>
 15,Nikolina Pavlova,Guild Master,,Kate,skinthekate,skinthekate,skinthekate,,,,
 16,Mael Stronghart,Odie Asman,,Konck,konckalicious,,konckquer,,,My favourite part of TGAA is when Stronghart said "It's Maelin' time!" and started maelin' all over the Old Bailey,
 17,Judge,,,MYOSS,,myossssss,,,,,
@@ -21,7 +21,7 @@
 21,Lay D. Furst,,,Felix,heartheadband,heartheadband,,,,Hats off to this guy!,
 22,Gina Lestrade,,alt,Ruti,StarrryKnight_,starrryknight,,,,Gina! feat. Toby :),
 23,Tobias Gregson,,,Lena,7mwatermelon,,,,,Greggy tried to be hard-boiled on screen and paid the price.,
-24,Soseki Natsume,Duncan Ross,,Quinn,peppermint_artz,peppermintartz ,,,,"LOCAL STUDENT MR. NARUHODOU ESQUIRE!",<div class="secret-kitty" id="cat2" onclick="kittyFound2()"><img src="art/cat2.png"></div>
+24,Soseki Natsume,Duncan Ross,,Quinn,peppermint_artz,peppermintartz ,,,,"LOCAL STUDENT MR. NARUHODOU ESQUIRE!",<div class="secret-kitty" id="cat2" onclick="kittyFound(2)"><img src="art/cat2.png"></div>
 25,Joan Garrideb,,,ROM,ROMc_m,,,,,Bombastic Side Eye (Victorian Era Edition),
 26,John Garrideb,Young Woman,,Novelocks,novelocks,,novelocks,,,,
 27,Olive Green,,,Dragon of Shades,dragonofshades,,,,,Olive represents every artist's struggles,
@@ -39,7 +39,7 @@
 39,Albert Harebrayne,,,Champy,Champy_is_there,,,,,*Blows Crystal Tower with mind*,
 40,Esmeralda Tusspells,,,shifting-fixations,,shifting-fixations,,,,I’d model for her any day~,
 41,Balthazar Lune,Young Man,,ajihaew,ajihaew,ajihaew,,,,,
-42,Wilhelm Gottsreich Sigismond Ormstein,,,SpilledTe,Spilled_Te,,,,,I WANT MY OWN ARMY; I WANT MY OWN PLANET; I DESERVE IT!!!1! -Gotts,<div class="secret-kitty" id="cat1" onclick="kittyFound1()"><img src="art/cat1.png"></div>
+42,Wilhelm Gottsreich Sigismond Ormstein,,,SpilledTe,Spilled_Te,,,,,I WANT MY OWN ARMY; I WANT MY OWN PLANET; I DESERVE IT!!!1! -Gotts,<div class="secret-kitty" id="cat1" onclick="kittyFound(1)"><img src="art/cat1.png"></div>
 43,Courtney Sithe,Vilen Borshevik,alt,kovv,,,kovvskii,,,don’t you just love women who kill,
 44,Maria Gorey,,alt,cocoreaux,,,cocoreaux_,,,teeheehee *CUTS YOU OPEN,
 45,Enoch Drebber,,,Agi,_velpi,velpi,,https://linktr.ee/velpi,Linktree,beep boop boop beep,

@@ -515,6 +515,8 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
 
 .cats img{
   width: 30px;
+  padding: none;
+  margin: none;
 }
 
 .cats:hover, .cats:focus {
@@ -763,6 +765,10 @@ display: none;
   }
   .chibi-item img{
     width: 27vw;
+  }
+  
+  .cats img{
+    width: 20px;
   }
 
     /* INDIVIDUAL SPACING: MOBILE */

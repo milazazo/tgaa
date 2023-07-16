@@ -109,19 +109,19 @@ function characterArray() {
         art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">` + twitter + tumblr + instagram + website + `</div>`;
       });
 
-      var randomCat1 = Math.floor(Math.random()*slideBox.length); console.log("kitty 1 can be found at: " + randomCat1);
-      var randomCat2 = Math.floor(Math.random()*slideBox.length); console.log("kitty 2 can be found at: " + randomCat2);
-      var randomCat3 = Math.floor(Math.random()*slideBox.length); console.log("kitty 3 can be found at: " + randomCat3);
-  
-      const firstCat = slideBox[randomCat1];
-      let randomCat1html = `<div class="secret-kitty" id="cat1" onclick="kittyFound(1)"><img src="art/cat1.png"></div>`
-      firstCat.innerHTML += randomCat1html
-      const secondCat = slideBox[randomCat2];
-      let randomCat2html = `<div class="secret-kitty" id="cat2" onclick="kittyFound(2)"><img src="art/cat2.png"></div>`
-      secondCat.innerHTML += randomCat2html
-      const thirdCat = slideBox[randomCat3];
-      let randomCat3html = `<div class="secret-kitty" id="cat3" onclick="kittyFound(3)"><img src="art/cat3.png"></div>`
-      thirdCat.innerHTML += randomCat3html
+      for (let i = 0; i < characterArray.length; i++) {
+        let slideDiv = document.createElement('div');
+        slideDiv.className = 'slides';
+        slides.appendChild(slideDiv);
+    }
+
+    for (let i = 1; i < 4; i++) {
+        var randomCat = Math.floor(Math.random()*slideBox.length);
+        console.log("kitty " + i + "can be found at: " + randomCat);
+        const catBox = slideBox[randomCat];
+        let randomCathtml = `<div class="secret-kitty" id="cat` + i + `" onclick="kittyFound(` + i + `)"><img src="art/cat`+ i +`.png"></div>`
+        catBox.innerHTML += randomCathtml;
+      }
     });
 
       return;

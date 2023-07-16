@@ -483,6 +483,10 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#congrats {
+  display: none;
+}
+
 .secret-kitty{
   scale: 1;
   transition: 0.3s ease-in-out;
@@ -762,6 +766,9 @@ display: none;
     width: 27vw;
   }
   
+  .cats{
+    width: 20px;
+  }
   .cats img{
     width: 20px;
   }

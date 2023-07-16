@@ -216,7 +216,6 @@ function openMenu() {
 
 var cats = 0;
 var firstCatFound = 0; var secondCatFound = 0; var thirdCatFound = 0;
-const congrats = document.getElementById('congrats');
 const wagahai = document.getElementById('wagahai');
 
 function kittyFound(n) {
@@ -227,7 +226,7 @@ function kittyFound(n) {
     console.log("number of cats found: " + cats);
     if (cats == 3){
         console.log("you found all the cats :D");
-        congrats.innerHTML = "Congratulations, you found all of Wagahai's kittens!"
+        document.getElementById("congrats").style.display = "block";
         wagahai.innerHTML = "<b>Wagahai says:</b> Meow meow meow! (Thanks for finding my kittens!)"
     }
 }

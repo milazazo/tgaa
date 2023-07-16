@@ -75,7 +75,6 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   background-color: #a88456;
   z-index: 90;
   animation: fadeOutAnimation ease 1s;animation-delay: 2.25s;animation-iteration-count: 1;animation-fill-mode: forwards;
-  display: none; /* DELETE LATER */
 }
 
 #loading-logo{
@@ -86,7 +85,6 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   top: 35%;
   z-index: 100;
   animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
-  display: none; /* DELETE LATER */
 }
 
 #loading-logo img{
@@ -102,7 +100,6 @@ a:link { text-decoration: none; } a:visited { text-decoration: none; } a:hover {
   z-index: -5;
   animation: fadeOutAnimation ease 0.5s;animation-delay: 25s;animation-iteration-count: 1;animation-fill-mode: forwards;
   animation: rotation 12s infinite linear;
-  display: none; /* DELETE LATER */
 }
 
 #loading-gear img{
@@ -606,9 +603,7 @@ display: none;
     left: 5vw;
     transform: rotate(90deg);
   }
-      .double-img{
-        margin-bottom: 80vh;
-      }
+
       .solo-img .chibi-img{
         top: -35vh;
         left: 20vw;

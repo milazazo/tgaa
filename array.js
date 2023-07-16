@@ -21,8 +21,7 @@ function characterArray() {
         instagram: values[7],
         website: values[8],
         websitename: values[9],
-        description: values[10],
-        kitty: values[11],
+        description: values[10]
     };
     });
     console.log(characterArray);
@@ -106,17 +105,23 @@ function characterArray() {
             website += ``;
         }
 
-        let kitten = ""; // Check if there's a secret kitty
-        if (characterArray[index].kitty !== '') {
-            kitten += characterArray[index].kitty; // If there is a kitten, display it
-        } else {
-            kitten += ``;
-        }
-
         box.innerHTML = 
-        art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">`+ twitter + tumblr + instagram + website +`</div>` + kitten;
+        art + `<div class="modal-textbox"><div class="modal-title"> <div class="chara-title">` + title + `</div> / `+ characterArray[index].artist + `</div><div class="comment">` + description + `</div></div><div class="soclink-box">` + twitter + tumblr + instagram + website + `</div>`;
       });
- 
+
+      var randomCat1 = Math.floor(Math.random()*slideBox.length); console.log("kitty 1 can be found at: " + randomCat1);
+      var randomCat2 = Math.floor(Math.random()*slideBox.length); console.log("kitty 2 can be found at: " + randomCat2);
+      var randomCat3 = Math.floor(Math.random()*slideBox.length); console.log("kitty 3 can be found at: " + randomCat3);
+  
+      const firstCat = slideBox[randomCat1];
+      let randomCat1html = `<div class="secret-kitty" id="cat1" onclick="kittyFound(1)"><img src="art/cat1.png"></div>`
+      firstCat.innerHTML += randomCat1html
+      const secondCat = slideBox[randomCat2];
+      let randomCat2html = `<div class="secret-kitty" id="cat2" onclick="kittyFound(2)"><img src="art/cat2.png"></div>`
+      secondCat.innerHTML += randomCat2html
+      const thirdCat = slideBox[randomCat3];
+      let randomCat3html = `<div class="secret-kitty" id="cat3" onclick="kittyFound(3)"><img src="art/cat3.png"></div>`
+      thirdCat.innerHTML += randomCat3html
     });
 
       return;
@@ -144,8 +149,7 @@ function characterArray() {
         instagram: values[7],
         website: values[8],
         websitename: values[9],
-        description: values[10],
-        kitty: values[11]
+        description: values[10]
     };
     });
     console.log(characterArray);
@@ -233,5 +237,3 @@ function kittyFound(n) {
         wagahai.innerHTML = "<b>Wagahai says:</b> Meow meow meow! (Thanks for finding my kittens!)"
     }
 }
-
-

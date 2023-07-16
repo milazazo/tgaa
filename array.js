@@ -113,7 +113,7 @@ function characterArray() {
         var randomCat = Math.floor(Math.random()*slideBox.length);
         console.log("kitty " + i + " can be found at: " + randomCat);
         const catBox = slideBox[randomCat];
-        let randomCathtml = `<div class="secret-kitty" id="cat` + i + `" onclick="kittyFound(` + i + `)"><img src="art/cat`+ i +`.png"></div>`
+        let randomCathtml = `<div class="secret-kitty" id="cat` + i + `" onclick="kittyFound(` + i + `)"><img src="art/cat`+ i +`.PNG"></div>`
         catBox.innerHTML += randomCathtml;
       }
     });

@@ -113,7 +113,7 @@ function characterArray() {
         var randomCat = Math.floor(Math.random()*slideBox.length);
         console.log("kitty " + i + " can be found at: " + randomCat);
         const catBox = slideBox[randomCat];
-        let randomCathtml = `<div class="secret-kitty" id="cat` + i + `" onclick="kittyFound(` + i + `)"><img src="art/cat`+ i +`.PNG"></div>`
+        let randomCathtml = `<div class="secret-kitty" id="cat` + i + `" onclick="kittyFound(` + i + `)"><img src="art/cat`+ i +`.webp"></div>`
         catBox.innerHTML += randomCathtml;
       }
     });
@@ -215,7 +215,6 @@ function openMenu() {
   }
 
 var cats = 0;
-var firstCatFound = 0; var secondCatFound = 0; var thirdCatFound = 0;
 const wagahai = document.getElementById('wagahai');
 
 function kittyFound(n) {

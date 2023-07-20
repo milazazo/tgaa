@@ -226,6 +226,6 @@ function kittyFound(n) {
     if (cats == 3){
         console.log("you found all the cats :D");
         document.getElementById("congrats").style.display = "block";
-        wagahai.innerHTML = "<b>Wagahai says:</b> Meow meow meow! (Thanks for finding my kittens!)"
+        wagahai.innerHTML = "<b>Wagahai says:</b> Miaow! (Thanks for finding my kittens!)"
     }
 }

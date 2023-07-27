@@ -13,7 +13,7 @@ Art collaboration for The Great Ace Attorney. Live page is viewable at [demo](ht
 - [x] Replace mySlides with something else lol
 - [x] Make new button/banner (no one else is going to use this)
 - [x] **Fix mobile spacing**
-- [ ] **Add all images**
+- [x] **Add all images**
 - [x] **Add hover images and chibi images to main image modal**
 - [x] **Optimize all images (resize, compress, convert to .webp)**
 - [x] **Fix commas and quotes on captions**

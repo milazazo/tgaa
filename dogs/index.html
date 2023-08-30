@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<head>
+    <title>D🐶GS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dai Gyakuten Saiban Dogboy Zine">
+    <meta name="keywords" content="ace attorney, the great ace attorney, tgaa, dgs, zine, anthology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/> <!-- main stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- animation  -->
+
+    <script> 
+
+    </script> 
+</head>
+
+<style>
+    :root {
+    --animate-delay: 0.2s;
+  }
+    #main-container{
+        background-color: white;
+    }
+
+    .image{
+        text-align: center;
+        margin:0.5em;
+    }
+
+    .image img{
+        width: 80%;
+    }
+
+    #intro{
+        text-align: center;
+    }
+
+    .title-splash{
+        color: #b6220f;
+        font-family: 'Darumadrop One', serif;
+        font-size: 14em;
+        position: fixed;
+        transition: 0.3s;
+    }
+
+    @media screen and (min-width: 1600px) {
+        #d{
+        top: -40px;
+        right: 27%;
+        rotate: 10deg;
+        pointer-events: none;
+    }
+
+    #o{
+        top: 120px;
+        right: 22%;
+        transition: 0.3s;
+    }
+
+    #o:hover{
+        scale:1.1;
+        rotate: 10deg;
+    }
+
+    #g{
+        top: 280px;
+        right: 26%;
+        rotate: -10deg;
+        pointer-events: none;
+    }
+
+    #s{
+        top: 425px;
+        right: 23%;
+        rotate: 5deg;
+        pointer-events: none;
+    }
+
+    #exclamation{
+        top: 600px;
+        right: 26%;
+        rotate: -7deg;
+        pointer-events: none;
+    }
+    }
+
+    @media screen and (min-width: 1080px) and (max-width: 1599px) {
+        #d{
+        top: -60px;
+        right: 17%;
+        rotate: 10deg;
+        pointer-events: none;
+    }
+
+    #o{
+        top: 75px;
+        right: 12%;
+        transition: 0.3s;
+        z-index: 5;
+    }
+
+    #g{
+        top: 200px;
+        right: 16%;
+        rotate: -10deg;
+        pointer-events: none;
+    }
+
+    #s{
+        top: 320px;
+        right: 11%;
+        rotate: 5deg;
+        pointer-events: none;
+    }
+
+    #exclamation{
+        top: 410px;
+        right: 18%;
+        rotate: -7deg;
+        pointer-events: none;
+    }
+
+    .button{
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+    }
+    }
+
+    @media screen and (min-width: 1080px) {
+        #main-container{
+        width: 45vw;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 230px;
+        padding-top: 1em;
+        padding-left: 2.8em;
+        padding-right: 2.8em;
+        padding-bottom: 2.8em;
+    }
+
+    #o:hover{
+        scale:1.1;
+        rotate: 10deg;
+    }
+
+    #side-container{
+        position: fixed;
+        top: 100px;
+        left: 142px;
+        z-index: 5;
+    }
+
+    #side-container a{
+        text-decoration: none;
+    }
+
+    #bottom-container{
+        display:none;
+    }
+
+    #intro{
+        font-size: 1.3em;
+    }
+
+    .info-box{
+        margin: 1em;
+    }
+
+    #dj img{
+        width:40%
+    }
+
+    #template img{
+        width:30%
+    }
+
+    h1{
+        margin-block-end: 0.3em;
+    }
+    }
+
+    @media screen and (max-width: 1080px) {
+        #main-container{
+        width: 95%;
+        height: 80vh;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 20px;
+        padding: none;
+        overflow-y: auto;
+    }
+
+    #side-container{
+        display: none;
+    }
+
+    #bottom-container{
+        position: fixed;
+        bottom: 1vh;
+        left: 50%;
+        width: 300px;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+
+    .title-splash{
+        display: none;
+    }
+
+    .info-box{
+        margin-top: 1em;
+        border-radius: 0px;
+    }
+
+    #intro{
+        padding: 0.2em 1em 0.2em 1em;
+    }
+
+    li{
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+
+    .answer{
+        margin-left: 0.5em; /* Also needed for space (tweak if needed) */
+    }
+
+    .image img{
+        width: 100%;
+    }
+
+    #splash{
+        display: none;
+    }
+    }
+    
+</style>
+<body>
+<div id="d" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-1s">D</div>
+<div id="o" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-2s"><img src="ryu.png" style="height:1em"></div>
+<div id="g" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-3s">G</div>
+<div id="s" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-4s">S</div>
+<div id="exclamation" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-5s">!</div>
+
+<nav id="side-container" class="animate__animated animate__fadeInLeft animate__faster animate__delay-5s">
+    <button class="nav-button" onclick="openTab('general')">General</button>
+    <button class="nav-button" onclick="openTab('artist-info')">Artist Info</button>
+    <button class="nav-button" onclick="openTab('questions')">Questions</button>
+    <button class="nav-button" onclick="openTab('sitely')">Sitely</button>
+</nav>
+
+<nav id="bottom-container">
+    <button class="nav-button" onclick="openTab('general')">1</button>
+    <button class="nav-button" onclick="openTab('artist-info')">2</button>
+    <button class="nav-button" onclick="openTab('questions')">3</button>
+    <button class="nav-button" onclick="openTab('sitely')">4</button>
+</nav>
+
+<main id="main-container">
+    <h1>D<img src="ryu.png" style="height:1em">GS: The DGS Dogboy Zine!</h1>
+    <article id="general" class="tab">
+        <p id="intro"><b>D<img src="ryu.png" style="height:1em" alt="O">GS</b> is a Great Ace Attorney zine focused on portraying the cast as dogboys and doggirls, whether anthro, feral, or kemonomimi. It is a free anthology designed for printing as a monochrome A5/half-letter size booklet.</p>
+    
+        <div class="image"><img src="dogs.png"></div>
+
+        <div class="info-box"><h2>Format</h2>
+            <ul>
+                <li>The anthology is designed for both digital and physical viewing.</li>
+                <ul>
+                    <li>On the digital side, there'll be a <b>webzine</b> where all creations are visible.</li>
+                    <li>On the physical side, there'll be a <b>printable PDF</b> pre-formatted for both A5 <i>and</i> half-letter size booklets. The PDF will be set up in advance so that all you need to do is print, fold, and staple it.</li>
+                </ul>
+                <li>Essentially, it's a <b>digital zine that's specifically designed to be printed out.</b> It should look good even when printed on a basic home or library computer. This means it differs from other digital zines which are primarily meant to be viewed digitally only. Because of this, there are some particular specifications when it comes to the creation of this anthology.</li>
+                <li>The zine is <b>monochrome (black/white) only</b> and will have <b>44 pages at most</b> (staple-bound is difficult for books over this size). Since most home printers can't print to the edge, please note that everything should be drawn with a white border in mind.</li>
+                <li>Additionally, there'll be printable goods in color. The printable PDF and goods will be available to download on itch.io for free.</li>
+            </ul>
+        </div>
+
+        <div class="info-box"><h2>Content</h2>
+            <ul>
+                <li>Illustrations, comics, and printable merch are accepted.</li>
+                <li>The content matter is anything to do with DGS characters as dogs (anthro, feral, kemonomimi, and whatever else are all fine). It's called a dogboy zine but it'll have doggirls too.</li>
+                <li>It doesn't have to match the official DGS April Fools dogperson art style/proportions/designs.</li>
+                <li>PG-13. Content level can basically be the same as the games.</li>
+                <li>No romantic coupling.</li>
+            </ul>
+        </div>
+
+        <div class="info-box"><h2>Schedule</h2>
+            <ul>
+                <li><b>Oct 1 - Oct 22:</b> Applications</li>
+                <li><b>Oct 23 - Oct 31:</b> Results</li>
+                <li><b>Nov 1 - Jan 31:</b> Creation (more detailed check-in schedule TBD)</li>
+                <li><b>Feb 1 - Feb 31:</b> Pinch hitters and formatting</li>
+                <li><b>Mar 1:</b> Release!</li>
+            </ul>
+        </div>
+    </article>
+
+    <article id="artist-info" class="tab" style="display:none">
+        <div class="info-box"><h2>Roles</h2>
+            There'll be one form for all roles. You could be selected for just one or multiple (you can state preference).
+            <ul>
+                <li><b>Cover:</b> Single page. Monochrome, but a colored version can also be created if you want. A basic background can suffice. The cover art should be <b>anthro only</b> and feature <b>dogboy Ryunosuke <i>and/or</i> dogboy Asogi</b> at least (other characters can also be included). You can draw something small on the back as well if you want to.</li>
+                <li><b>Page:</b> 2 pages maximum (can pick between one single page, two single pages, or one spread). Monochrome only. Background isn't required. The artwork can be either anthro, feral, kemonomimi, or other. Illustrations and comics are both fine.</li>
+                <li><b>Merch:</b> Limit TBD but the minimum is just one piece. In color. <b>Printable</b> (at home) merch is preferred over merch solely made for digital use. Please check <a href="https://docs.google.com/document/d/1BStJ_Xint7fvBVherP1fTBSEA42VFOyYRT_DTJlrpKk/edit?usp=sharing">this doc</a> for the type of merch available; it's a bit different from usual digital zine merch, so take a look even if you aren't ordinarily interested in merch roles for non-physical projects.</li>
+            </ul>
+        </div>
+        <div class="info-box">
+            <h2>Portfolio Requirements</h2>
+            <p>Ideally I'd like to include all artists who sign up, but <span class="tt">due to the limited page count it's likely that applications will be required<span class="ttt">i'd prefer to do first-come first-served signups personally as i dislike holding applications, but that method caused a lot of issues in the previous tgaa collab so i'll avoid it this time. i'm sorry for the trouble...</span></span>. You'll need to include a basic portfolio when filling out the form. Suggestions (but not requirements):</p>
+            <ul>
+                <li>Dogboy/doggirl artwork</li>
+                <li>Furry/animal artwork in general</li>
+                <li>Monochromatic artwork or lineart</li>
+                <li>Color artwork (if you want to do the merch role in particular)</li>
+            </ul>
+        </div>
+    </article>
+    
+    <article id="questions" class="tab" style="display:none">
+        <div class="info-box" id="questions"><h2>Questions</h2>
+            <div class="question white" style="padding-top: 0;"><b>What is anthro/feral/kemonomimi?</b><br>
+                <div class="answer"><b>Anthro</b> is the type of furry design that's more human-like where the characters stand on two legs and wear human clothing. The DGS April Fools designs are examples of anthro dogpeople. <b>Feral</b> is basically the same as real animals where the characters stand on four legs and look like regular dogs. <b>Kemonomimi</b> is just a human with animal ears and other animal characteristics such as a tail. All are acceptable for this anthology. We'll try to include at least a few of each, though there won't be any strict balancing of styles.</div>
+                <div class="image"><img src="example.png"></div>
+                <div class="caption">Anthro / Feral / Kemonomimi / IDK what Bluey is but she counts for this</div>
+            </div>
+            <div class="question"><b>Can I include other animals?</b><br>
+                <div class="answer">Sure, but please remember that it's a dogboy zine and not a general furry zine; each piece needs to focus on dogs first and foremost!</div>
+            </div>
+            <div class="question white"><b>Who can apply?</b><br>
+                <div class="answer">Anyone over the age of 15 can apply.</div>
+            </div>
+            <div class="question"><b>What is the compensation?</b><br>
+                <div class="answer">Since it's free, there is none. Anyone is welcome to print out as many copies of the anthology as they want for <b>free distribution only</b>. Making a profit from selling the book is strictly prohibited. You can use your own art for whatever you want after the one month donation period is over.</div>
+            </div>
+            <div class="question white"><b>How much will it cost to print and how do I set it up?</b><br>
+                <div class="answer">At most, it will use 11 double-sided black-and-white pages. The cost depends on where you print it, e.g. if you're a student in a university, printing there will generally be cheaper than going to a copy center like Staples. Please check your school/workplace/library/copy center/house to see printing costs.
+                <br><br>The PDF will already be formatted for booklet printing so all you need to do is print it out, fold, and staple it. See <a href="https://www.wikihow.com/Staple-a-Booklet">here</a> for how to staple a booklet with a regular short stapler. The PDF in regular format will also be supplied.</div>
+            </div>
+            <div class="question"><b>How will updates be communicated?</b><br>
+                <div class="answer">Email is required; all updates will be sent through there. There will also be an optional Discord server which participants can join if they want to (if you join it, I won't send any email updates).
+                <br><br>Check-in schedule to be decided later. You must let me know in advance if you need extra time past the final deadline or if you're unable to participate in the end.</div>
+            </div>
+            <div class="question white"><b>How many participants will there be?</b><br>
+                <div class="answer">It's hard to tell at the moment. The absolute page limit is 44, but 4 of those pages are used for the cover. Since each person can essentially get up to 2 pages, the participant count for the book itself could range anywhere from 20~ish to 35~ish.</div>
+            </div>
+            <div class="question"><b>Can I apply for multiple roles?</b><br>
+                <div class="answer">Yes. If you apply for multiple, you might get selected for up to two roles. It'll be worded as "___ <i>and/or</i> ___" so you can choose to do both roles or just one.</div>
+            </div>
+            <div class="question white"><b>How are characters/pitches assigned?</b><br>
+                <div class="answer">When you apply, you can write a list of the top 5 characters you want to draw as well as any concepts you have in mind. Character assignments will be sent out during results. Please create a piece that has the assigned character in some way (no pitch/concept required). The assigned character doesn't need to be the <i>focus</i> though (e.g. it could be a group shot too, as long as it contains that character in some way so there's a decent variety).</div>
+            </div>
+            <div class="question"><b>Are there any guest artists?</b><br>
+                <div class="answer">Some people I vaguely know have been invited in advance, but there isn't any distinction between them and applying artists (the character and role will be decided later with everyone else).</div>
+            </div>
+            <div class="question white"><b>What is monochrome and how does it differ from grayscale?</b><br>
+                <div class="answer">Monochrome is pure black/white and can include the usage of screentones or other shading techniques like hatching. Grayscale can include the use of tones outside of black/white (i.e. grays).
+                <br><br>This anthology is <b>monochrome</b>. The reason for this is that it simply looks better when printed with most home printers. Using screentone/hatching for 'grays' instead of actual grays is also more efficient <span class="tt">when it comes to ink <span class="ttt">and ink is expensive!!!</span></span>. I can convert your art from grayscale to monochrome with screentones if needed (and if it's absolutely necessary for your style, then greyscale is fine too).
+            </div>
+            </div>
+            <div class="question"><b>What else should I know about the formatting?</b><br>
+                <div class="image" id="dj"><img src="https://i.etsystatic.com/34497860/r/il/46074d/3963661705/il_794xN.3963661705_khiy.jpg"></div>
+                <div class="caption">You can't print to the edge, so it's best to draw thinking of that consciously</div>
+                <div class="answer">It's recommended to not use too much pure black fill since it can show up strongly on the backside of thin paper. Please note that all artwork will have to be drawn with a white border in mind as most casual printers are unable to print to the edge of a page. You can basically treat it like a frame. More detailed formatting information will be provided later, including a template like this:
+                    <div class="image" id="template"><img src="template.png"></div>
+                    <div class="caption">To make things easier, the art only needs to be drawn in the <span class="tt">proportion of half-letter size<span class="ttt">the zine will still be formatted for A4 printing as well, though most people who'll download it are probably american so i'm prioritizing letter size. the art won't be cropped.</span></span>. When you draw, you can safely go to border 'INNER', but don't go past border 'OUTER'.</div></div>
+            </div>
+            </div>
+        </div>
+    </article>
+    <article id="sitely" class="tab" style="display:none">        
+        <div style="text-align: center;">
+            <a href="https://www.twitter.com/tgaacollab"><button class="button">Twitter</button></a>
+            <a href="https://tgaacollab.tumblr.com"><button class="button">Tumblr</button></a>
+            <a href="https://www.retrospring.net/tgaacollab"><button class="button">Retrospring</button></a>
+        </div>
+
+        <div class="info-box"><h2>Buttons</h2>
+            <p style="text-align: center;">
+                Link to <b>D<img src="ryu.png" style="height:1em">GS</b> with the buttons below!
+                <br><br>
+                <img src="banner.png"> <img src="button.png">
+                <br>
+                <textarea><a href="https://dogs.milaza.art"><img src="https://dogs.milaza.art/banner.png"></a></textarea> <textarea><a href="https://dogs.milaza.art"><img src="https://dogs.milaza.art/button.png"></a></textarea>
+            </p>
+        </div>
+
+        <div class="info-box"><h2>Miscellaneous</h2>
+            <ul>
+                <li>Organized by Andrew (<a href="https://www.twitter.com/milaza_zo">milaza_zo</a>/<a href="https://www.twitter.com/milaza_dgs">milaza_dgs</a>), a dogboy who prefers cats. Abi (<a href="https://www.twitter.com/ajihaew">ajihaew</a>) will be assisting me for application/portfolio-related things since I'm not good with reviewing applications and emails.</li>
+                <li>Regarding <a href="https://tgaa.milaza.art/">TGAA Collab</a>: it'll probably be back next year (late 2024) with a different theme and full open submission to anyone/any form of media.</li>
+            </ul>
+        </div>
+    </article>
+    
+</main>
+<script>
+
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+
+}
+</script>
+</body>

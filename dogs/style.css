@@ -1,0 +1,259 @@
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c2542d;
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b6220f;
+  }
+
+/* TOOLTIP */
+
+.tt {
+    position: relative;
+    display: inline;
+    border-bottom: 1px dotted #c2542d;
+}
+
+.tt .ttt {
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -12em;
+    border-radius: 10px;
+    padding: 1em;
+    width: 24em;
+    background-color: #420c05;
+    color: #fff;
+    font-size: 0.8em;
+    text-align: center;
+    }
+
+.tt .ttt::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #420c05 transparent transparent transparent;
+    }
+
+.tt:hover .ttt {
+    visibility: visible;
+    }
+
+
+/* GENERAL */
+
+body{
+    background-color: #d18468;
+    background-image: url("graphics/bg.png");
+    color: #420c05;
+    font-family: 'Nunito', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+b{
+    color: #b6220f;
+}
+
+a{
+    color: #c2542d;
+}
+
+textarea{
+    resize: none;
+}
+
+h1{
+    margin-block-end: 0.4em;
+    padding-bottom: 0.4em;
+    border-bottom: #c2542d dotted 4px;
+    color: #b6220f;
+    font-family: 'Darumadrop One', sans-serif;
+    text-align: center;
+    transition: 0.3s;
+}
+
+h2{
+    margin-block-start: 0em;
+    border-bottom: #c2542d dotted 2px;
+    padding-bottom: 0.1em;
+    color: #b6220f;
+    font-size: 1.6em;
+    font-family: 'Darumadrop One', sans-serif;
+}
+
+h2::before{
+    content: url(paw.png)
+}
+
+.caption{
+    margin-bottom: 0.5em;
+    color: #b6220f;
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2726 \2800 \2800";
+    display: inline-block;
+    margin-left: -1.2em;
+    width: 1.2em;
+    color: #c2542d;
+    font-weight: bold;
+}
+
+hr{
+    border-top: #c2552d5b dotted 2px;
+}
+
+/* BOXES */
+
+.info-box{
+    padding: 1em;
+    border-radius: 20px;
+    background-color: #faf1f0;
+}
+
+.question{
+    padding: 1em;
+}
+
+.answer{
+    margin-left: 2em;
+}
+
+.white{
+    background-color: white;
+}
+
+/* BUTTONS */
+
+.button{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+    padding-top: 0.1em;
+    border-radius: 20px;
+    border: none;
+    min-width: 8em;
+    background-color: #b6220f;
+    background-image: url("graphics/bg.png");
+    color: white;
+    font-family: 'Darumadrop One', sans-serif;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+.button:hover{
+    background-color: #c2542d;
+    background-image: url("graphics/bg.png");
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.nav-button{
+    display: block;
+    margin: 0.2em;
+    border: none;
+    width: 180px;
+    height: 75px;
+    background: none;
+    background-image: url("graphics/button.png");
+    background-repeat: no-repeat;
+    background-color: none;
+    color:#b6220f;
+    font-size: 1.6em;
+    font-family: 'Darumadrop One', serif;
+    text-align: left;
+    text-shadow:
+    -2px -2px 0 #FFF,
+     0   -2px 0 #FFF,
+     2px -2px 0 #FFF,
+     2px  0   0 #FFF,
+     2px  2px 0 #FFF,
+     0    2px 0 #FFF,
+    -2px  2px 0 #FFF,
+    -2px  0   0 #FFF;
+    transition: 0.3s;
+}
+
+.nav-button:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+@media screen and (min-width: 1080px) {
+
+    h1{
+        margin-block-start: 0em;
+        font-size: 4em;
+        line-height: 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+
+    .tt .ttt {
+        position: fixed;
+        bottom: 30vw;
+        left: 15vw;
+        width: 60vw;
+        margin-left: 0px;
+        transform-origin: 50% 50%;
+        }
+
+    .tt .ttt::after {
+        display: none;
+    }    
+
+    h1{
+        margin-block-start: 0em;
+        margin-block-end: 0.4em;
+        font-size: 3em;
+        line-height: 80%;
+    }
+
+    ul li::before {
+        margin-left: -1.5em;
+        width: 1.5em;
+    }
+
+    .button{
+        width: 90%;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
+    }
+
+    .nav-button{
+        display: inline-block;
+        width: 60px;
+        height: 70px;
+        text-align: center;
+    }
+
+}

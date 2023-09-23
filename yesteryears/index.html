@@ -1,0 +1,237 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- animation  -->
+<style>
+    /* SCROLL IN */
+.scrollin {
+    -webkit-transform: translateY(50px) rotate(-5deg) translateZ(0);
+    transform: translateY(50px) rotate(-5deg) translateZ(0);
+    -webkit-transition-delay: .8s;
+    -o-transition-delay: .8s;
+    transition-delay: .8s;
+    -webkit-transition: .1s;
+    -o-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+    }
+    .bottom-right.inView {
+        opacity: 1;
+        -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+        transform: translateY(0px) rotate(0deg) translateZ(0);
+    }
+    .inView {
+        opacity: 1;
+        -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+        transform: translateY(0px) rotate(0deg) translateZ(0);
+    }
+    section {
+        padding:20px;
+    }
+
+    /* GEN */
+    body{
+        background-image: url("https://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png");
+        background-color: #EEE2DE;
+        font-family: 'Fanwood Text', 'Times New Roman', Times, serif;
+        color: #2B2A4C;
+        overflow-x: hidden;
+    }
+
+    b{
+        color:#805730;
+    }
+
+    h1{
+        color: white;
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+        filter: drop-shadow(0 0 0 1rem #EEE2DE);
+        margin:0;
+    }
+
+    h2{
+        color:#805730;
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+        margin-bottom: 0;
+        margin-top: 5px;
+        border-bottom: solid 1px #805730;
+    }
+
+    h2:before{
+        content:"\2732";
+    }
+
+    #titlebox{
+        position: fixed;
+        top:0%;
+        left: -5%;
+        height:14vh;
+        font-size: 2em;
+        background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+        background-color:  #805730;
+        width: 120%;
+        border-bottom: solid 4px white;
+        padding: 0.5em;
+        z-index: 5;
+    }
+
+    #title{
+        position: relative;
+        left: 5%;
+    }
+
+    #subtitle{
+        font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+        color: white;
+    }
+
+    .box{
+        width: 50vw;
+        background-color: white;
+        padding: 10px;
+        margin: 1em;
+    }
+
+    #content{
+        position: absolute;
+        right: 10%;
+        top: 15%;
+    }
+
+    #photos{
+        position: absolute;
+        left: 10%;
+        top: 15%;
+    }
+
+    .photo{
+        margin-top: 8em;
+        margin-bottom: 8em;
+    }
+
+    .photo img{
+        width: 20vw;
+        border: solid 7px white;
+        filter:drop-shadow(5px 5px 4px #948585);
+        transition: 0.5s;
+    }
+
+    .photo img:hover{
+        rotate: 5deg;
+    }
+
+    #photo-1{
+        top:10%;
+        rotate: 2deg;
+    }
+
+    #photo-2{
+        top:50%;
+        rotate: -4deg;
+    }
+    
+    #photo-3{
+        top:80%;
+        rotate: 2.5deg;
+    }
+
+    #photo-4{
+        top:80%;
+        rotate: -4deg;
+    }
+
+</style>
+</head>
+<body>
+    <div id="titlebox">
+        <div id="title" class="animate__animated animate__fadeInDown"><h1 style="margin-bottom: 0;">yesteryears</h1>
+            <div id="subtitle">A Dai Gyakuten Saiban anthology featuring the characters of London 10 years prior.</div></div>
+    </div>
+
+    <div id="photos">
+        <div id="photo-1" class="photo scrollin"><img src="photo-1.jpg"></div>
+        <div id="photo-2" class="photo scrollin"><img src="photo-2.jpg"></div>
+        <div id="photo-3" class="photo scrollin"><img src="photo-3.jpg"></div>
+        <div id="photo-4" class="photo scrollin"><img src="photo-4.jpg"></div>
+    </div>
+    
+    <div id="content">
+    <div id="about" class="box"><h2>About</h2>
+        <p><b>yesteryears</b> focuses on <b>London as it was 10 years prior to the storyline of DGS</b>. It will include characters such as Barok, Klint, Lady Baskerville, Genshin, Herlock, Yujin, Seishiro, Albert, Courtney, Esmerelda, Enoch, etc. It is split into <b>two physical A5 zines</b>:
+        <ul>
+            <li>A full-color illustration zine, estimated 24~32 pages.</li>
+            <li>A B/W comic and fic anthology, estimated 80~100 pages.</li>
+        </ul>
+        Fluff, angst, humor, whatever; as long as it involves the cast of London from a decade ago, it fits. This anthology is PG-13 (same content level as games).
+        </p>
+        </div>
+
+        <div id="roles" class="box"><h2>Roles</h2>
+            <p>
+            <ul>
+                <li><b>[1~2] Cover artist:</b> Full color.</li>
+                <li><b>[15~25] Illust artist:</b> Full color. Can do single page or spread.</li>
+                <li><b>[5~15] Comic artist:</b> B/W only. Can do a comic from 2~12 pages in length.</li>
+                <li><b>[5] Fic writer:</b> Maximum length is 3000 words.</li>
+            </ul>
+            </p>
+            <h2>Requirements</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus est eu volutpat ullamcorper. Praesent mattis libero vitae quam luctus pellentesque. Vestibulum in accumsan nisi, eu ornare est. Ut rutrum ac enim nec varius. Donec consequat ac sapien a interdum. Curabitur non erat nisl. Nunc imperdiet scelerisque arcu, eget porttitor orci fringilla vel.
+                <br>
+                Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+            </p>
+            </div>
+
+            <div id="faq" class="box"><h2>F.A.Q</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus est eu volutpat ullamcorper. Praesent mattis libero vitae quam luctus pellentesque. Vestibulum in accumsan nisi, eu ornare est. Ut rutrum ac enim nec varius. Donec consequat ac sapien a interdum. Curabitur non erat nisl. Nunc imperdiet scelerisque arcu, eget porttitor orci fringilla vel.
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus.
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+                    <br>
+                    Vivamus viverra molestie odio nec lobortis. Vestibulum gravida iaculis ante, a venenatis nisi lacinia vel. Sed id ipsum leo. Donec suscipit arcu massa, vitae ultricies justo interdum sit amet. Vivamus maximus erat eget est faucibus, at vehicula eros mattis. Nunc at nunc ante. Aliquam tincidunt luctus est, non eleifend lorem malesuada ornare. Morbi eget eleifend purus. 
+                </p>
+                </div>
+
+                
+            <div id="mod" class="box scrollin"><h2>Moderators</h2>
+                <p>
+                    nobody gaf
+                </p>
+                </div>
+
+                <div id="sitely" class="box scrollin"><h2>Sitely</h2>
+                    <p>
+                        nobody gaf 2
+                    </p>
+                    </div>
+
+            </div>
+<script>
+    let elementsArray = document.querySelectorAll(".scrollin");
+console.log(elementsArray);
+window.addEventListener('scroll', fadeIn ); 
+function fadeIn() {
+    for (var i = 0; i < elementsArray.length; i++) {
+        var elem = elementsArray[i]
+        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+        if (distInView < 0) {
+            elem.classList.add("inView");
+        } else {
+            elem.classList.remove("inView");
+        }
+    }
+}
+fadeIn();
+</script>
+</body>

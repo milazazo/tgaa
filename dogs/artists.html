@@ -21,6 +21,11 @@
     :root {
     --animate-delay: 0.2s;
   }
+
+    img{
+        pointer-events: none;
+    }  
+
     #main-container{
         background-color: none;
     }
@@ -128,6 +133,10 @@
     }
 
     @media screen and (min-width: 1080px) {
+        body{
+            overflow-y: hidden;
+        }
+
         #ryu{
             position: fixed;
             bottom: -10px;
@@ -144,8 +153,9 @@
         .speech-bubble {
         position: relative;
         background: #ffffff;
-        border-radius: .4em;
+        border-radius: 10px;
         padding: 1.5em;
+        padding-top: 0.5em;
         filter: drop-shadow(3px 3px 0px #00000040);
         }
 
@@ -423,7 +433,7 @@
 
             <div class="artist-item" id="artist-mylin" style="rotate:3deg">
                 <div class="artist-title">Mylin</div>
-                <div class="artist-links"><b>Page</b><div class="artist-link tumblr"><a href="https://brbaltering.tumblr.com">brbaltering</a></div></div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://www.twitter.com/brbaltering">brbaltering</a></div><div class="artist-link tumblr"><a href="https://brbaltering.tumblr.com">brbaltering</a></div></div>
                 <img src="icons/mylin.png">
             </div>
             <div class="artist-item" id="artist-ray" style="rotate:-2deg">

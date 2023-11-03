@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<head>
+    <title>D🐶GS: Artists</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dai Gyakuten Saiban Dogboy Zine">
+    <meta name="keywords" content="ace attorney, the great ace attorney, tgaa, dgs, zine, anthology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/> <!-- main stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- animation  -->
+
+    <script> 
+
+    </script> 
+</head>
+
+<style>
+    :root {
+    --animate-delay: 0.2s;
+  }
+    #main-container{
+        background-color: none;
+    }
+
+    .title-splash{
+        color: #b6220f;
+        font-family: 'Darumadrop One', serif;
+        font-size: 14em;
+        position: fixed;
+        transition: 0.3s;
+    }
+
+    @media screen and (min-width: 1080px) {
+        #ryu{
+            position: fixed;
+            bottom: -10px;
+            right: 10%;
+            width: 20%;
+        }
+
+        #info{
+            position: fixed;
+            top: 12%;
+            right: 8%;
+        }
+
+        .speech-bubble {
+        position: relative;
+        background: #ffffff;
+        border-radius: .4em;
+        padding: 1.5em;
+        filter: drop-shadow(3px 3px 0px #00000040);
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #ffffff;
+            border-bottom: 0;
+            border-right: 0;
+            margin-left: -10px;
+            margin-bottom: -20px;
+            filter: drop-shadow(3px 3px 0px #00000040);
+        }
+
+        #main-container{
+        width: 45vw;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 230px;
+        padding-top: 1em;
+        padding-left: 2.8em;
+        padding-right: 2.8em;
+        padding-bottom: 2.8em;
+    }
+
+    #side-container{
+        position: fixed;
+        top: 100px;
+        left: 142px;
+        z-index: 5;
+    }
+
+    #side-container a{
+        text-decoration: none;
+    }
+
+    #bottom-container{
+        display:none;
+    }
+
+    #intro{
+        font-size: 1.3em;
+    }
+
+    .info-box{
+        margin: 1em;
+    }
+
+    #dj img{
+        width:40%
+    }
+
+    #template img{
+        width:30%
+    }
+
+    h1{
+        margin-block-end: 0.3em;
+    }
+
+    #artist-container{
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 2fr));
+    }
+    }
+
+    @media screen and (max-width: 1080px) {
+    #ryu{
+        display: none;
+    }
+
+    #info{
+        display: none;
+    }
+
+        #main-container{
+        width: 95%;
+        height: 80vh;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 20px;
+        padding: none;
+        overflow-y: auto;
+    }
+
+    #side-container{
+        display: none;
+    }
+
+    #bottom-container{
+        position: fixed;
+        bottom: 1vh;
+        left: 50%;
+        width: 80px;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+
+    .title-splash{
+        display: none;
+    }
+
+    #splash{
+        display: none;
+    }
+
+    #artist-container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 2fr));
+    }
+
+    }
+
+    .artist-item{
+        width: 75%;
+        transition: 0.3s;
+        text-align: center;
+        position: relative;
+        margin-bottom: 0.6em;
+    }
+
+    .artist-item:hover{
+        transform: rotate(5deg);
+    }
+
+    .artist-item img{
+        border: 0.5em solid white;
+        border-radius: 5px;
+        filter: drop-shadow(3px 3px 0px #00000040);
+        width: 100%;
+        transition: 0.2s;
+        background-color: white;
+    }
+
+    .artist-item:hover img{
+        filter: drop-shadow(3px 3px 0px #000000) blur(2px);
+        opacity: 0.20;
+    }
+
+    .artist-title{
+        position: absolute;
+        margin: 0;
+        top: 100%;
+        left: 65%;
+        -ms-transform: translate(-65%, -100%);
+        transform: translate(-65%, -100%);
+        z-index: 5;
+        color:#b6220f;
+        font-size: 1.6em;
+        font-family: 'Darumadrop One', serif;
+        text-align: left;
+        text-shadow:
+        -2px -2px 0 #FFF,
+        0   -2px 0 #FFF,
+        2px -2px 0 #FFF,
+        2px  0   0 #FFF,
+        2px  2px 0 #FFF,
+        0    2px 0 #FFF,
+        -2px  2px 0 #FFF,
+        -2px  0   0 #FFF;
+        filter: drop-shadow(3px 3px 0px #00000040);
+    }
+
+    .artist-links{
+        position: absolute;
+        margin: 0;
+        top: 30%;
+        left: 70%;
+        -ms-transform: translate(-70%, -30%);
+        transform: translate(-70%, -30%);
+        z-index: 5;
+        opacity: 0;
+        transition: .5s ease;
+        font-size: 0.9em;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .artist-item:hover .artist-links{
+        opacity: 1;
+    }
+
+    .artist-links b{
+        color:white;
+    }
+
+    .artist-links a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .instagram::before{
+        content:url("graphics/icon_insta.png");
+    }
+    
+    .twitter::before{
+        content:url("graphics/icon_twitter.png");
+    }
+    
+    .tumblr::before{
+        content:url("graphics/icon_tumblr.png");
+    }
+
+    .website::before{
+        content:url("graphics/icon_link.png");
+    }
+    
+</style>
+<body>
+<nav id="side-container" class="animate__animated animate__fadeInLeft animate__faster animate__delay-5s">
+    <button class="nav-button" onclick="window.location.href='https://tgaa.milaza.art/dogs';">General</button>
+</nav>
+
+<nav id="bottom-container">
+    <button class="nav-button" onclick="window.location.href='https://tgaa.milaza.art/dogs';">General</button>
+</nav>
+
+<div id="info" class="animate__animated animate__fadeInRight animate__faster animate__delay-3s">
+    <div class="speech-bubble">
+        <h1>D<img src="ryu.png" style="height:1em">GS Zine Artists</h1>
+        Hover to find our awesome artists across the web!
+    </div>
+</div>
+
+<div id="ryu" class="animate__animated animate__fadeInRight animate__faster animate__delay-1s"><img src="graphics/splash_ryu.png"></div>
+
+<main id="main-container">
+    <article id="general">
+        <br>
+        <div id="artist-container">
+            <div class="artist-item" id="artist-agi" style="rotate:3deg">
+                <div class="artist-title">Agi</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/_velpi">_velpi</a></div><div class="artist-link tumblr"><a href="https://velpi.tumblr.com">velpi</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/_velpi">_velpi</a></div></div>
+                <img src="icons/agi.png">
+            </div>
+            <div class="artist-item" id="artist-aurelia" style="rotate:0deg">
+                <div class="artist-title" style="left: 85%;-ms-transform: translate(-85%, -100%);transform: translate(-85%, -100%);">aurelia</div>
+                <div class="artist-links" style="left:75%"><b>Bookmarks</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/marinewaltz_">marinewaltz_</a></div><div class="artist-link tumblr"><a href="https://marinewaltz.tumblr.com">marinewaltz</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/marinewaltz">marinewaltz</a></div></div>
+                <img src="icons/aurelia.png">
+            </div>
+            <div class="artist-item" id="artist-black" style="rotate:-2deg">
+                <div class="artist-title">Black</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/artist_black">artist_black</a></div></div>
+                <img src="icons/black.png">
+            </div>
+            <div class="artist-item" id="artist-coda" style="rotate:1deg">
+                <div class="artist-title">Coda</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/usaalock">usaalock</a></div></div>
+                <img src="icons/coda.png">
+            </div>
+            <div class="artist-item" id="artist-corvin" style="rotate:-3deg">
+                <div class="artist-title">Corvin</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/corvikash">corvikash</a></div><div class="artist-link tumblr"><a href="https://corvikash.tumblr.com">corvikash</a></div></div>
+                <img src="icons/corvin.png">
+            </div>
+            <div class="artist-item" id="artist-dani" style="rotate:2deg">
+                <div class="artist-title">dani</div>
+                <div class="artist-links" style="left:75%"><b>Page/Stickers</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/owlmehh">owlmehh</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/owlmeh">owlmeh</a></div></div>
+                <img src="icons/dani.png">
+            </div>
+
+            <!--2-->
+
+            <div class="artist-item" id="artist-doot" style="rotate:-2deg">
+                <div class="artist-title">Doot</div>
+                <div class="artist-links" style="left:75%"><b>Page/Print</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/CentraliaDoot">CentraliaDoot</a></div><div class="artist-link website"><a href="https://www.reddit.com/u/dootmix">dootmix</a></div><div class="artist-link website"><a href="https://centraliadoot.bsky.social">centraliadoot</a></div></div>
+                <img src="icons/doot.png">
+            </div>
+            <div class="artist-item" id="artist-dr" style="rotate:1deg">
+                <div class="artist-title">name</div>
+                <div class="artist-links"></div>
+                <img src="icons/dr.png">
+            </div>
+            <div class="artist-item" id="artist-emsterchu" style="rotate:-2deg">
+                <div class="artist-title" style="left: -40%;-ms-transform: translate(40%, -100%);transform: translate(40%, -100%);">emsterchu</div>
+                <div class="artist-links" style="left: 75%"><b>Page</b><div class="artist-link tumblr"><a href="https://dilfachu-wright.tumblr.com">dilfachu-wright</a></div></div>
+                <img src="icons/emsterchu.png">
+            </div>
+            <div class="artist-item" id="artist-gr" style="rotate:0deg">
+                <div class="artist-title">name</div>
+                <div class="artist-links"></div>
+                <img src="icons/gr.png">
+            </div>
+            <div class="artist-item" id="artist-hiluta" style="rotate:-3deg">
+                <div class="artist-title">Hiluta</div>
+                <div class="artist-links" style="left: 80%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/lop5633">lop5633</a></div><div class="artist-link tumblr"><a href="https://amazingrace53.tumblr.com">amazingrace53</a></div></div>
+                <img src="icons/hiluta.png">
+            </div>
+            <div class="artist-item" id="artist-ida" style="rotate:2deg">
+                <div class="artist-title">ida</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/idaiisu">idaiisu</a></div><div class="artist-link tumblr"><a href="https://idaiisu.tumblr.com">idaiisu</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/idaiisu">idaiisu</a></div></div>
+                <img src="icons/ida.png">
+            </div>
+
+            <!--3-->
+
+            <div class="artist-item" id="artist-jennymure" style="rotate:2deg">
+                <div class="artist-title" style="left: 0%;-ms-transform: translate(-0%, -100%);transform: translate(-0%, -100%);">JennyMure</div>
+                <div class="artist-links" style="left: 80%"><b>Page</b><div class="artist-link twitter"><a href="https://Slowedmountains.tumblr.com">Slowedmountains</a></div><div class="artist-link website"><a href="https://cohost.org/knife">knife</a></div></div>
+                <img src="icons/Jenny Mure.png">
+            </div>
+            <div class="artist-item" id="artist-keegan" style="rotate:-3deg">
+                <div class="artist-title">Keegan</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link tumblr"><a href="https://aaimlesss.tumblr.com">aaimlesss</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/aaimlesss">aaimlesss</a></div></div>
+                <img src="icons/keegan.png">
+            </div>
+            <div class="artist-item" id="artist-leontari" style="rotate:2deg">
+                <div class="artist-title" style="left: 100%;-ms-transform: translate(-100%, -100%);transform: translate(-100%, -100%);">leontari</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/leontarii">leontarii</a></div><div class="artist-link tumblr"><a href="https://leontarii.tumblr.com">leontarii</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/leontarii">leontarii</a></div></div>
+                <img src="icons/leontari.png">
+            </div>
+            <div class="artist-item" id="artist-kily" style="rotate:-1deg">
+                <div class="artist-title">Lily</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/Lilyznow">Lilyznow</a></div><div class="artist-link tumblr"><a href="https://Lilyznow.tumblr.com">Lilyznow</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/Lilyznow">Lilyznow</a></div></div>
+                <img src="icons/lily.png">
+            </div>
+            <div class="artist-item" id="artist-lu" style="rotate:0deg">
+                <div class="artist-title">name</div>
+
+                <img src="icons/lu.png">
+            </div>
+            <div class="artist-item" id="artist-lulu" style="rotate:-2deg">
+                <div class="artist-title">Lulu</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/ferretleaf2">ferretleaf2</a></div></div>
+                <img src="icons/lulu.png">
+            </div>
+
+            <!--4-->
+
+            <div class="artist-item" id="artist-lycoris" style="rotate:-2deg">
+                <div class="artist-title">lycoris</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/lycris__">lycris__</a></div><div class="artist-link tumblr"><a href="https://lycorizz-pipis.tumblr.com">lycorizz-pipis</a></div></div>
+                <img src="icons/lycoris.png">
+            </div>
+            <div class="artist-item" id="artist-mai" style="rotate:0deg">
+                <div class="artist-title">mai</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/maiisntgod">maiisntgod</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/maiisntgod">maiisntgod</a></div></div>
+                <img src="icons/mai.png">
+            </div>
+            <div class="artist-item" id="artist-micah" style="rotate:-1deg">
+                <div class="artist-title">micah</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/octomaris">octomaris</a></div><div class="artist-link tumblr"><a href="https://catamaris.tumblr.com">catamaris</a></div></div>
+                <img src="icons/micah.png">
+            </div>
+            <div class="artist-item" id="artist-milaza" style="rotate:3deg">
+                <div class="artist-title">milaza</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/milaza_zo">milaza_zo</a></div><div class="artist-link tumblr"><a href="https://milaza.tumblr.com">milaza</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/milaza_zo">milaza_zo</a></div></div>
+                <img src="icons/milaza.png">
+            </div>
+            <div class="artist-item" id="artist-mini" style="rotate:-1deg">
+                <div class="artist-title">Mini</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/ministarfruit">ministarfruit</a></div><div class="artist-link tumblr"><a href="https://ministarfruit.tumblr.com">ministarfruit</a></div></div>
+                <img src="icons/mini.png">
+            </div>
+            <div class="artist-item" id="artist-moondoggie" style="rotate:0deg">
+                <div class="artist-title" style="left: 20%;-ms-transform: translate(-20%, -100%);transform: translate(-20%, -100%);">Moondoggie</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link tumblr"><a href="https://mewtwo365.tumblr.com">mewtwo365</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/mewtwo365">mewtwo365</a></div></div>
+                <img src="icons/moondoggie.png">
+            </div>
+
+            <!--5-->
+
+            <div class="artist-item" id="artist-mylin" style="rotate:3deg">
+                <div class="artist-title">Mylin</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link tumblr"><a href="https://brbaltering.tumblr.com">brbaltering</a></div></div>
+                <img src="icons/mylin.png">
+            </div>
+            <div class="artist-item" id="artist-ray" style="rotate:-2deg">
+                <div class="artist-title">Ray</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/howlonomy">howlonomy</a></div></div>
+                <img src="icons/ray.png">
+            </div>
+            <div class="artist-item" id="artist-rjay" style="rotate:2deg">
+                <div class="artist-title">Rjay</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/bitter_rayjay">bitter_rayjay</a></div><div class="artist-link tumblr"><a href="https://bitter-rayjay.tumblr.com">bitter-rayjay</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/bitter_rayjay">bitter_rayjay</a></div></div>
+                <img src="icons/rjay.png">
+            </div>
+            <div class="artist-item" id="artist-ro" style="rotate:-1deg">
+                <div class="artist-title">name</div>
+                <img src="icons/ro.png">
+            </div>
+            <div class="artist-item" id="artist-sos" style="rotate:3deg">
+                <div class="artist-title">Sos</div>
+                <div class="artist-links" style="left:75%"><b>Page/Papercraft</b><div class="artist-link instagram"><a href="https://www.instagram.com/milkikkow">milkikkow</a></div></div>
+                <img src="icons/sos.png">
+            </div>
+            <div class="artist-item" id="artist-taffy" style="rotate:-2deg">
+                <div class="artist-title">Taffy</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/Chompyboo">Chompyboo</a></div><div class="artist-link tumblr"><a href="https://Chompyboo.tumblr.com">Chompyboo</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/Chompyboo">Chompyboo</a></div></div>
+                <img src="icons/taffy.png">
+            </div>
+
+            <!--6-->
+
+            <div class="artist-item" id="artist-te" style="rotate:0deg">
+                <div class="artist-title">Te</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/Spilled_Te">Spilled_Te</a></div><div class="artist-link tumblr"><a href="https://SpilledTe.tumblr.com">SpilledTe</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/SpilledTe">SpilledTe</a></div></div>
+                <img src="icons/te.png">
+            </div>
+            <div class="artist-item" id="artist-temklinn" style="rotate:2deg">
+                <div class="artist-title" style="left: 100%;-ms-transform: translate(-100%, -100%);transform: translate(-100%, -100%);">temklinn</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/temklinn">temklinn</a></div><div class="artist-link tumblr"><a href="https://pythnensis.tumblr.com">pythnensis</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/pythnensis">pythnensis</a></div></div>
+                <img src="icons/temklinn.png">
+            </div>
+            <div class="artist-item" id="artist-veccy" style="rotate:-3deg">
+                <div class="artist-title">Veccy</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/veccyboo">veccyboo</a></div><div class="artist-link tumblr"><a href="https://veccyboo.tumblr.com">veccyboo</a></div></div>
+                <img src="icons/veccy.png">
+            </div>
+            <div class="artist-item" id="artist-westeast" style="rotate:2deg">
+                <div class="artist-title" style="left: 200%;-ms-transform: translate(-200%, -100%);transform: translate(-200%, -100%);">Westeast</div>
+                <div class="artist-links" style="left:75%"><b>Page/Print</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/westeastcat">westeastcat</a></div></div>
+                <img src="icons/westeast.png">
+            </div>
+            <div class="artist-item" id="artist-yamatobro" style="rotate:-1deg">
+                <div class="artist-title" style="left: 0%;-ms-transform: translate(-0%, -100%);transform: translate(-0%, -100%);">yamatobro</div>
+                <div class="artist-links" style="left:75%"><b>Stickers/Emotes</b></div>
+                <img src="icons/yamatobro.png">
+            </div>
+            <div class="artist-item" id="artist-yams" style="rotate:2deg">
+                <div class="artist-title">Yams</div>
+                <div class="artist-links" style="left:80%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/unamusedyams">unamusedyams</a></div><div class="artist-link tumblr"><a href="https://unamusedyams.tumblr.com">unamusedyams</a></div></div>
+                <img src="icons/yams.png">
+            </div>
+        </div>
+    </article>
+    
+</main>
+</body>

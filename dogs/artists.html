@@ -142,6 +142,7 @@
             bottom: -10px;
             right: 10%;
             width: 20%;
+            filter: drop-shadow(3px 3px 0px #00000040);
         }
 
         #info{
@@ -226,6 +227,10 @@
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 2fr));
     }
+
+    #title{
+        display: none;
+    }
     }
 
     @media screen and (max-width: 1600px) {
@@ -242,6 +247,15 @@
         grid-template-columns: repeat(3, minmax(0, 2fr));
     }
 
+    #title{
+        display: block;
+    }
+
+    h1{
+        color: white;
+        border: none;
+        filter: drop-shadow(3px 3px 0px #00000040);
+    }
 
     }
 
@@ -298,6 +312,7 @@
 <main id="main-container">
     <article id="general">
         <br>
+        <h1 id="title">D<img src="ryu.png" style="height:1em">GS Zine Artists</h1>
         <div id="artist-container">
             <div class="artist-item" id="artist-agi" style="rotate:3deg">
                 <div class="artist-title">Agi</div>
@@ -334,7 +349,7 @@
 
             <div class="artist-item" id="artist-doot" style="rotate:-2deg">
                 <div class="artist-title">Doot</div>
-                <div class="artist-links" style="left:75%"><b>Page/Print</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/CentraliaDoot">CentraliaDoot</a></div><div class="artist-link website"><a href="https://www.reddit.com/u/dootmix">dootmix</a></div><div class="artist-link website"><a href="https://centraliadoot.bsky.social">centraliadoot</a></div></div>
+                <div class="artist-links" style="left:75%"><b>Page/Print</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/CentraliaDoot">CentraliaDoot</a></div><div class="artist-link website"><a href="https://www.reddit.com/u/dootmix">dootmix</a></div><div class="artist-link website"><a href="https://bsky.app/profile/centraliadoot.bsky.social">centraliadoot</a></div></div>
                 <img src="icons/doot.png">
             </div>
             <div class="artist-item" id="artist-dr" style="rotate:1deg">
@@ -347,10 +362,10 @@
                 <div class="artist-links" style="left: 75%"><b>Page</b><div class="artist-link tumblr"><a href="https://dilfachu-wright.tumblr.com">dilfachu-wright</a></div></div>
                 <img src="icons/emsterchu.png">
             </div>
-            <div class="artist-item" id="artist-gr" style="rotate:0deg">
-                <div class="artist-title">name</div>
-                <div class="artist-links"></div>
-                <img src="icons/gr.png">
+            <div class="artist-item" id="artist-grumbybat" style="rotate:0deg">
+                <div class="artist-title" style="left: 0%;-ms-transform: translate(-0%, -100%);transform: translate(-0%, -100%);">Grumbybat</div>
+                <div class="artist-links"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/grumbybat">grumbybat</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/grumbybat">grumbybat</a></div></div>
+                <img src="icons/grumbybat.png">
             </div>
             <div class="artist-item" id="artist-hiluta" style="rotate:-3deg">
                 <div class="artist-title">Hiluta</div>
@@ -367,7 +382,7 @@
 
             <div class="artist-item" id="artist-jennymure" style="rotate:2deg">
                 <div class="artist-title" style="left: 0%;-ms-transform: translate(-0%, -100%);transform: translate(-0%, -100%);">JennyMure</div>
-                <div class="artist-links" style="left: 80%"><b>Page</b><div class="artist-link twitter"><a href="https://Slowedmountains.tumblr.com">Slowedmountains</a></div><div class="artist-link website"><a href="https://cohost.org/knife">knife</a></div></div>
+                <div class="artist-links" style="left: 80%"><b>Page</b><div class="artist-link tumblr"><a href="https://Slowedmountains.tumblr.com">Slowedmountains</a></div><div class="artist-link website"><a href="https://cohost.org/knife">knife</a></div></div>
                 <img src="icons/jenny mure.png">
             </div>
             <div class="artist-item" id="artist-keegan" style="rotate:-3deg">
@@ -446,9 +461,10 @@
                 <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/bitter_rayjay">bitter_rayjay</a></div><div class="artist-link tumblr"><a href="https://bitter-rayjay.tumblr.com">bitter-rayjay</a></div><div class="artist-link instagram"><a href="https://www.instagram.com/bitter_rayjay">bitter_rayjay</a></div></div>
                 <img src="icons/rjay.png">
             </div>
-            <div class="artist-item" id="artist-ro" style="rotate:-1deg">
-                <div class="artist-title">name</div>
-                <img src="icons/ro.png">
+            <div class="artist-item" id="artist-ro0" style="rotate:-1deg">
+                <div class="artist-title">Roo</div>
+                <div class="artist-links" style="left:75%"><b>Page</b><div class="artist-link twitter"><a href="https://wwww.twitter.com/nagameong">nagameong</a></div></div>
+                <img src="icons/roo.png">
             </div>
             <div class="artist-item" id="artist-sos" style="rotate:3deg">
                 <div class="artist-title">Sos</div>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<head>
+    <title>D🐶GS ZINE</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dai Gyakuten Saiban Dogboy Zine">
+    <meta name="keywords" content="ace attorney, the great ace attorney, tgaa, dgs, zine, anthology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/> <!-- main stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- animation  -->
+
+    <script> 
+
+    </script> 
+</head>
+
+<style>
+    :root {
+    --animate-delay: 0.2s;
+    }
+
+    img{
+        pointer-events: none;
+    }  
+
+    #main-container{
+        background-color: none;
+    }
+
+    #sitely .info-box{
+        margin: 1em;
+    }
+
+    .title-splash{
+        color: #b6220f;
+        font-family: 'Darumadrop One', serif;
+        font-size: 14em;
+        position: fixed;
+        transition: 0.3s;
+    }
+
+    .artist-item{
+        transition: 0.3s;
+        text-align: center;
+        position: relative;
+        margin-bottom: 0.8em;
+    }
+
+    .artist-item img{
+        border: 0.5em solid white;
+        border-radius: 5px;
+        filter: drop-shadow(3px 3px 0px #00000040);
+        width: 75%;
+        transition: 0.2s;
+        background-color: white;
+    }
+
+    .artist-title{
+        position: absolute;
+        margin: 0;
+        top: 105%;
+        left: 50%;
+        -ms-transform: translate(-50%, -105%);
+        transform: translate(-50%, -105%);
+        z-index: 5;
+        color:#b6220f;
+        font-size: 2em;
+        font-family: 'Darumadrop One', serif;
+        text-align: left;
+        text-shadow:
+        -2px -2px 0 #FFF,
+        0   -2px 0 #FFF,
+        2px -2px 0 #FFF,
+        2px  0   0 #FFF,
+        2px  2px 0 #FFF,
+        0    2px 0 #FFF,
+        -2px  2px 0 #FFF,
+        -2px  0   0 #FFF;
+        filter: drop-shadow(3px 3px 0px #00000040);
+    }
+
+    .artist-links{
+        position: absolute;
+        margin: 0;
+        top: 30%;
+        left: 70%;
+        -ms-transform: translate(-70%, -30%);
+        transform: translate(-70%, -30%);
+        z-index: 5;
+        opacity: 0;
+        transition: .5s ease;
+        font-size: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .artist-item:hover .artist-links{
+        opacity: 1;
+    }
+
+    .artist-links b{
+        color:white;
+    }
+
+    .artist-links a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobile-only{
+        display: none;
+    }
+
+    @media screen and (min-width: 1080px) {
+
+        #main-container{
+        width: 45vw;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 230px;
+        padding-top: 1em;
+        padding-left: 2.8em;
+        padding-right: 2.8em;
+        padding-bottom: 2.8em;
+    }
+
+    #side-container{
+        position: fixed;
+        top: 100px;
+        left: 142px;
+        z-index: 5;
+    }
+
+    #side-container a{
+        text-decoration: none;
+    }
+
+    #bottom-container{
+        display: none;
+    }
+
+    #intro{
+        font-size: 1.3em;
+    }
+
+    h1{
+        margin-block-end: 0.3em;
+    }
+
+    #artist-container{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 2fr));
+    }
+
+    #title{
+        display: none;
+    }
+
+
+    }
+
+    @media screen and (max-width: 1600px) {
+        body{
+            overflow-y: scroll;
+        }    
+
+    #info{
+        display: none;
+    }
+
+    #artist-container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 2fr));
+    }
+
+    #title{
+        display: block;
+    }
+
+    h1{
+        color: white;
+        border: none;
+        filter: drop-shadow(3px 3px 0px #00000040);
+    }
+
+    .mobile-only{
+        display: block;
+    }
+
+    .desktop-only{
+        display: none;
+    }
+
+    }
+
+    @media screen and (max-width: 1080px) {
+
+        #main-container{
+        width: 95%;
+        height: 80vh;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 20px;
+        padding: none;
+        overflow-y: auto;
+        }
+
+        #side-container{
+            display: none;
+        }
+
+        #bottom-container{
+            position: fixed;
+            bottom: 1vh;
+            left: 50%;
+            width: 80px;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
+
+        .artist-title{
+            font-size: 1.2em;
+        }
+
+    }
+
+    @media screen and (min-width: 1600px) { 
+        /* title splash above 1600px */
+        #d{top: -40px;right: 27%;rotate: 10deg;pointer-events: none;}
+        #o{top: 120px;right: 22%;transition: 0.3s;}
+        #o:hover{scale:1.1;rotate: 10deg;}
+        #g{top: 280px;right: 26%;rotate: -10deg;pointer-events: none;}
+        #s{top: 425px;right: 23%;rotate: 5deg;pointer-events: none;}
+        #exclamation{top: 600px;right: 26%;rotate: -7deg;pointer-events: none;}
+
+        #info-container{
+        display: grid;
+        grid-template-columns: 14fr 8fr;
+        min-height: 70vh;
+        }
+
+        #cover{
+            margin-left: 1em;
+            min-height: 70vh;
+            border-radius: 20px;
+            background-color: #faf1f0;
+        }
+
+        #cover img{
+            margin-top: 1.5em;
+        }
+
+        #cover-credit{
+            text-align: center;
+        }
+    }
+    
+</style>
+<body>
+
+<!-- TITLE SPLASH -->
+<div id="d" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-1s">D</div>
+<div id="o" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-2s"><img src="ryu.png" style="height:1em"></div>
+<div id="g" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-3s">G</div>
+<div id="s" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-4s">S</div>
+<div id="exclamation" class="title-splash animate__animated animate__flipInX animate__faster animate__delay-5s">!</div>
+
+<!-- DESKTOP LINKS -->
+<nav id="side-container" class="animate__animated animate__fadeInLeft animate__faster animate__delay-5s">
+    <button class="nav-button" onclick="openTab('home')">Home</button>
+    <button class="nav-button" onclick="openTab('gallery')">Gallery</button>
+    <button class="nav-button" onclick="openTab('merch')">Merch</button>
+    <button class="nav-button" onclick="window.location.href='https://tgaa.milaza.art/dogs/artists';">Artists</button>
+    <button class="nav-button" onclick="openTab('sitely')">Sitely</button>
+</nav>
+
+
+<!-- MAIN CONTENT -->
+<main id="main-container"><h1>D<img src="ryu.png" style="height:1em">GS: The DGS Dogboy Zine!</h1>
+
+    <article id="home" class="tab">
+        <div id="info-container"> <!-- INFO CONTAINER -->
+            <div class="info-box">
+                <h2>About</h2>
+                <p><b>DOGS</b> is a Dai Gyakuten Saiban (The Great Ace Attorney) fanbook all about the cast as adorable cute puppy doggies. It featured 34 artists and was available for PDF download from February 10th to March 3rd. In this time, it raised <b>$1074 NZD</b> ($664 USD) for the charity <b>Blind Low Vision NZ (Guide Dogs)</b>. Thank you to everyone who supported this zine!</p>
+                <p>On this page, you can see a <b>low-res gallery</b> of the artwork featured in the zine, as well as some brand-new colored versions!</p>
+                <h2>Message</h2>
+                <p>i'll write something here later</p>
+                <h2>Special Thanks</h2>
+                <p>i think only like one person filled out the form lol</p>
+            </div>
+            <div id="cover">
+                <img src="https://files.catbox.moe/le2dej.png">
+                <p id="cover-credit">Cover by Sos.</p>
+            </div>
+        </div>
+    </article>
+
+    <article id="gallery" class="tab" style="display:none">
+
+        <div id="artist-container">
+            <div class="artist-item colored" id="artist-name" onclick="myFunction3()">
+                <div class="artist-title">Moondoggie</div>
+                <img src="art/moondoggie03.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">temklinn</div>
+                <img src="art/temklinn02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Hiluta</div>
+                <img src="art/hiluta.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">ida</div>
+                <img src="art/ida.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Lulu</div>
+                <img src="art/lulu.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Roo</div>
+                <img src="art/roo01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">brbaltering</div>
+                <img src="art/mylin.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">micah</div>
+                <img src="art/micah.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">emsterchu</div>
+                <img src="art/emsterchu.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Chompyboo</div>
+                <img src="art/chompyboo.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Mini</div>
+                <img src="art/mini.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">milaza</div>
+                <img src="art/milaza01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Moondoggie</div>
+                <img src="art/moondoggie02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Westeast</div>
+                <img src="art/westeast.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Rjay</div>
+                <img src="art/rjay01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Owlmeh</div>
+                <img src="art/owlmehh.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Rjay</div>
+                <img src="art/rjay02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Lilyznow</div>
+                <img src="art/lilyznow.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Veccy</div>
+                <img src="art/veccy.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Doot</div>
+                <img src="art/doot.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Mai</div>
+                <img src="art/mai.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Keegan</div>
+                <img src="art/keegan02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">milaza</div>
+                <img src="art/milaza02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Corvin</div>
+                <img src="art/corvin02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Jenna</div>
+                <img src="art/jenna.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">temklinn</div>
+                <img src="art/temklinn01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">lycoris</div>
+                <img src="art/lycoris.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">black</div>
+                <img src="art/black02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Moondoggie</div>
+                <img src="art/moondoggie01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Leontari</div>
+                <img src="art/leontarii.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Yams</div>
+                <img src="art/yams.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Ray</div>
+                <img src="art/ray.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Corvin</div>
+                <img src="art/corvin01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Coda</div>
+                <img src="art/coda01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Keegan</div>
+                <img src="art/keegan01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">SpilledTe</div>
+                <img src="art/spilledte.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Vul</div>
+                <img src="art/vul.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">black</div>
+                <img src="art/black01.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">Coda</div>
+                <img src="art/coda02.webp">
+            </div>
+            <div class="artist-item" id="artist-name">
+                <div class="artist-title">milaza</div>
+                <img src="art/milaza03.webp">
+            </div>
+        </div>
+
+    </article>
+
+    <article id="merch" class="tab" style="display:none">        
+        merch pics tba
+    </article>
+
+    <article id="sitely" class="tab" style="display:none">        
+        <div style="text-align: center;">
+            <a href="https://www.twitter.com/dogszine"><button class="button">Twitter</button></a>
+            <a href="https://dgsdogs.tumblr.com"><button class="button">Tumblr</button></a>
+            <a href="https://www.retrospring.net/dogszine"><button class="button">Retrospring</button></a>
+        </div>
+
+        <div class="info-box"><h2>Buttons</h2>
+            <p style="text-align: center;">
+                Link to <b>D<img src="ryu.png" style="height:1em">GS</b> with the buttons below!
+                <br><br>
+                <img src="banner.png"> <img src="button.png">
+            </p>
+        </div>
+    </article>
+    
+</main>
+
+<!-- SCRIPTS-->
+<script>
+
+    function openTab(tabName) {
+      var i;
+      var x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(tabName).style.display = "block";  
+    
+    }
+    </script>
+</body>

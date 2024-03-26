@@ -206,6 +206,23 @@ hr{
     scale: 1.1;
 }
 
+/* SOCMED */
+.instagram::before{
+    content:url("graphics/icon_insta.png");
+}
+
+.twitter::before{
+    content:url("graphics/icon_twitter.png");
+}
+
+.tumblr::before{
+    content:url("graphics/icon_tumblr.png");
+}
+
+.website::before{
+    content:url("graphics/icon_link.png");
+}
+
 @media screen and (min-width: 1080px) {
 
     h1{

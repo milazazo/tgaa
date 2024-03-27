@@ -120,6 +120,15 @@
         color: white;
     }
 
+    .colored-pic:hover{
+        box-shadow: 0px 0px 10px 10px #D7663A;
+        cursor: pointer;
+    }
+
+    .colored img{
+        pointer-events: all;
+    }
+
     .mobile-only{
         display: none;
     }
@@ -129,12 +138,12 @@
     #info-container{
         display: grid;
         grid-template-columns: 14fr 8fr;
-        min-height: 50vh;
+        min-height: 40vh;
     }
 
     #cover{
             margin-left: 1em;
-            min-height: 50vh;
+            min-height: 40vh;
             border-radius: 20px;
             background-color: #faf1f0;
     }
@@ -142,10 +151,6 @@
     #cover img{
             margin-top: 1.5em;
             width: 100%;
-    }
-
-    #cover-credit{
-            text-align: center;
     }
     
 #merch-container {
@@ -159,7 +164,6 @@
     .merch-pic img{
         width: 100%;
     }
-
 
     @media screen and (max-width: 1080px) {
 
@@ -314,7 +318,7 @@
     }
 
     #sitely-ryu{
-        float: left;height: 44vh;position: absolute;bottom: 0;
+        float: left;height: 46vh;position: absolute;bottom: 0;
     }
 
     }
@@ -357,6 +361,34 @@
         #exclamation{top: 600px;right: 26%;rotate: -7deg;pointer-events: none;}
     }
     
+    .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.671);
+    }
+
+    /* Modal Content */
+    .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: fit-content;
+    max-width: 1200px;
+    text-align: center;
+    }
+
+    .modal-content img{
+        max-height: 80vh;
+        max-width: 100%;
+    }
 </style>
 <body>
 
@@ -391,14 +423,15 @@
         <div id="info-container"> <!-- INFO CONTAINER -->
             <div class="info-box">
                 <h2>About</h2>
-                <p><b>DOGS</b> is a Dai Gyakuten Saiban (The Great Ace Attorney) fanbook all about the cast as adorable cute puppy doggies. It features 34 artists and was available for PDF download from February 10th to March 3rd. In this time, it raised <b>$1100 NZD</b> ($664 USD) for the charity <b>Blind Low Vision NZ (Guide Dogs)</b>.</p>
-                <p>On this page, you can see a <b>low-res gallery</b> of the artwork featured in the zine, as well as some brand-new colored versions!</p>
-                <h2>Special Thanks</h2>
-                <p>Thank you to everyone who donated in purchasing this zine, especially: i'll update this later</p>
+                <p><b>DOGS</b> is a Dai Gyakuten Saiban (The Great Ace Attorney) fanbook all about the cast as adorable cute puppy doggies. It features 34 artists and was available for PDF download from February 10th to March 3rd. In this time, it raised <b>$1100 NZD</b> ($664 USD) for the charity <b>Blind Low Vision NZ (Guide Dogs)</b>. Click <span style="font-weight: 1000; cursor: pointer; color: #b6220f;" onclick="openReceipt()">here</span> to view the donation receipt.</p>
+                <p>On this page, you can see a <b>low-res gallery</b> of the artwork featured in the zine, as well as a couple of new colored versions!</p>
+                <h2>Note</h2>
+                <p>It's been a long few months, but DOGS is finally complete. I'm truly overjoyed with how incredible everything turned out, and so super duper happy to see this much cute DGS dogboy art! Thank you to all of the amazing artists who were able to make this niche idea a reality and all of the supporters who raised an awesome amount for such a small zine. Woof woof!
+                    <br><br><span style="float: right;">- <a href="https://www.twitter.com/milaza_zo">Andrew</a></span>
+                </p>
             </div>
             <div id="cover">
                 <img src="art/sos.png">
-                <p id="cover-credit">Cover by Sos.</p>
             </div>
         </div>
     </article>
@@ -450,9 +483,9 @@
                 <div class="artist-title">Mini</div>
                 <img src="art/mini.webp">
             </div>
-            <div class="artist-item" id="artist-name">
+            <div class="artist-item colored" id="artist-name">
                 <div class="artist-title">milaza</div>
-                <img src="art/milaza01.webp">
+                <img src="art/milaza01.webp" class="colored-pic" onclick="openMilaza01()">
             </div>
             <div class="artist-item" id="artist-name">
                 <div class="artist-title">Moondoggie</div>
@@ -494,9 +527,9 @@
                 <div class="artist-title">Keegan</div>
                 <img src="art/keegan02.webp">
             </div>
-            <div class="artist-item" id="artist-name">
+            <div class="artist-item colored" id="artist-name">
                 <div class="artist-title">milaza</div>
-                <img src="art/milaza02.webp">
+                <img src="art/milaza02.webp" class="colored-pic" onclick="openMilaza02()">
             </div>
             <div class="artist-item" id="artist-name">
                 <div class="artist-title">Corvin</div>
@@ -510,9 +543,9 @@
                 <div class="artist-title">temklinn</div>
                 <img src="art/temklinn01.webp">
             </div>
-            <div class="artist-item" id="artist-name">
+            <div class="artist-item colored" id="artist-name">
                 <div class="artist-title">lycoris</div>
-                <img src="art/lycoris.webp">
+                <img src="art/lycoris.webp" class="colored-pic" onclick="openLycoris()">
             </div>
             <div class="artist-item" id="artist-name">
                 <div class="artist-title">black</div>
@@ -582,8 +615,8 @@
                     <li><b>WIP zine:</b> SpilledTe, Veccy, Lilyznow, Corvin, brbaltering, Chompyboo, temklinn, Roo, emsterchu, Grumbybat, Keegan, Doot</li>
                 </ul>
             </div>
-            <div class="merch-pic div3"><img src="https://img.itch.zone/aW1hZ2UvMjQ2MzU1MS8xNDk1MjU1MC5qcGc=/original/%2Bb%2BcfK.jpg"></div>
-            <div class="merch-pic div4"><img src="https://img.itch.zone/aW1hZ2UvMjQ2MzU1MS8xNDk1MjU0OC5qcGc=/original/Ib9FLN.jpg"></div>
+            <div class="merch-pic div3"><img src="https://img.itch.zone/aW1hZ2UvMjQ2MzU1MS8xNDk1MjU0OC5qcGc=/original/Ib9FLN.jpg"></div>
+            <div class="merch-pic div4"><img src="https://img.itch.zone/aW1hZ2UvMjQ2MzU1MS8xNDk1MjU1MC5qcGc=/original/%2Bb%2BcfK.jpg"></div>
             <div class="merch-pic div5"><img src="https://pbs.twimg.com/media/GGAECeobgAA77JM?format=jpg&name=medium"></div>
             <div class="merch-pic div6"><img src="https://pbs.twimg.com/media/GGpY5yfbIAAe8Dg?format=jpg&name=large"></div>
             <div class="merch-pic div7"><img src="https://64.media.tumblr.com/e9c1227132439d297f22c9387da96c5d/9939a61da03ce635-a8/s1280x1920/ef8586a5c2eeac50266b6425f93f4d82fe7edbbf.jpg"></div>
@@ -596,24 +629,41 @@
             <a href="https://dgsdogs.tumblr.com"><button class="button">Tumblr</button></a>
         </div>
 
-        <div class="info-box"><h2>Buttons</h2>
+        <div class="info-box" id="note"><h2>Buttons</h2>
             <p style="text-align: center;">
                 Link to <b>D<img src="ryu.png" style="height:1em">GS</b> with the buttons below!
                 <br><br>
                 <img src="banner.png"> <img src="button.png">
             </p>
         </div>
-        <div class="info-box" id="note"><h2>Note</h2>
-        <p>It's been a long few months, but DOGS is finally complete. I'm truly overjoyed with how incredible everything turned out, and so super duper happy to see this much cute DGS dogboy art! Thank you to all of the amazing artists who were able to make this niche idea a reality and all of the supporters who raised an awesome amount for such a small zine. Woof woof! - Andrew</p>
-        </div>
 
         <div class="info-box" id="misc"><h2>Miscellaneous</h2>
-            <p>Organized by Andrew (<a href="https://www.twitter.com/milaza_zo">milaza_zo</a>) as circle <a href="http://barok.top/3630">3630</a>. Thank you to Abi (<a href="https://www.twitter.com/ajihaew">ajihaew</a>) and Black (<a href="https://www.twitter.com/artist_black">artist_black</a>) for your assistance!</p>
+            <p>Organized by Andrew (<a href="https://www.twitter.com/milaza_zo">milaza_zo</a>) with help from Abi (<a href="https://www.twitter.com/ajihaew">ajihaew</a>) and Black (<a href="https://www.twitter.com/artist_black">artist_black</a>). Special thank you to Seven, Apollo, and the other anonymous supporters who donated extra.</p>
         </div>
         <img src="graphics/splash_ryu.png" id="sitely-ryu">
     </article>
     
 </main>
+
+<div class="lightbox" id="receipt" onclick="closeModal()">
+    <div class="modal-content"><img src="https://pbs.twimg.com/media/GJEXTxVaQAApWLd?format=jpg&name=900x900">
+        </div>
+</div>
+
+<div class="lightbox" id="milaza01" onclick="closeModal()">
+    <div class="modal-content"><img src="art/milaza01.webp">
+        </div>
+</div>
+
+<div class="lightbox" id="milaza02" onclick="closeModal()">
+    <div class="modal-content"><img src="art/milaza02.webp">
+        </div>
+</div>
+
+<div class="lightbox" id="lycoris" onclick="closeModal()">
+    <div class="modal-content"><img src="art/lycoris.webp">
+        </div>
+</div>
 
 <!-- SCRIPTS-->
 <script>
@@ -627,5 +677,28 @@
       document.getElementById(tabName).style.display = "block";  
     
     }
-    </script>
+
+    function openReceipt() {
+      document.getElementById("receipt").style.display = "block";
+    }
+
+    function openMilaza01() {
+      document.getElementById("milaza01").style.display = "block";
+    }
+
+    function openMilaza02() {
+      document.getElementById("milaza02").style.display = "block";
+    }
+
+    function openLycoris() {
+      document.getElementById("lycoris").style.display = "block";
+    }
+
+        function closeModal() {
+    document.getElementById("receipt").style.display = "none";
+    document.getElementById("milaza01").style.display = "none";
+    document.getElementById("milaza02").style.display = "none";
+    document.getElementById("lycoris").style.display = "none";
+    }
+</script>
 </body>
